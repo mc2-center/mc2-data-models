@@ -1,0 +1,3430 @@
+---
+CDS Genomics:
+  source_name: HTAN Data Model
+  target_version: v1.3.3
+  source_version: v26.6.1
+  attributes:
+    - target_attribute: phs_accession
+      target_description: A stable unique alphanumeric identifier assigned to a study
+        and any objects by the database of Genotypes and Phenotypes (dbGaP).
+      target_cde: 11524544
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: study_name
+      target_description: "The narrative title used as a textual label for a
+        research data collection.  Example Comparative Molecular Life History
+        of Spontaneous Canine and Human Gliomas"
+      target_cde: 11459810
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      fixed_value: Human Tumor Atlas Network (HTAN) primary sequencing data
+      note: null
+    - target_attribute: study_acronym
+      target_description: "The acronym or abbreviated form of the title for a 
+        research data collection.  Example GLIOMA01"
+      target_cde: 11459812
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      fixed_value: HTAN
+      note: null
+    - target_attribute: number_of_participants
+      target_description: The number of unique participant instances associated with
+        a systematic investigation into a subject.
+      target_cde: 11555662
+      target_required: true
+      source_attribute: HTAN Participant ID
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        len(set(source_col))
+    - target_attribute: number_of_samples
+      target_description: The number of samples associated with a subset of a larger
+        population  associated with systematic investigation into a subject.
+      target_cde: 11555663
+      target_required: true
+      source_attribute: HTAN Biospecimen ID
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        len(set(source_col))
+    - target_attribute: study_data_types
+      target_description: The type of study or experimental data generated for testing
+        or research purposes.
+      target_cde: 12571096
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      fixed_value: Genomic
+      note: null
+    - target_attribute: experimental_strategy_and_data_subtype
+      target_description: The type of systematic investigation using controlled observations
+        and measurements to test hypotheses or develop a plan of action based on the
+        facts discovered.
+      target_cde: 12373576
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      fixed_value: WXS; RNA-Seq
+      note: null
+    - target_attribute: acl
+      target_description: A free text field used to document whether the data in a repository
+        is open access or controlled access.
+      target_cde: 11555664
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      fixed_value: "['phs002371']"
+      note: null
+    - target_attribute: authz
+      target_description: null
+      target_cde: null
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: role_or_affiliation
+      target_description: The text that describes the distinguishable characteristics
+        of the action or activity assigned to or required or expected of a person in
+        a formal association with a group or organization.
+      target_cde: 2201713
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      fixed_value: Principal Investigator
+      note: null
+    - target_attribute: title
+      target_description: The abbreviation that represents an affix occurring at or
+        before the beginning of an individual's name.
+      target_cde: 2663165
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      fixed_value: Dr.
+      note: null
+    - target_attribute: first_name
+      target_description: A word or group of words indicating a person's first (personal
+        or given) name; the name that precedes the surname. Synonym = Given Name.
+      target_cde: 2179589
+      target_required: true
+      source_attribute: pi_first
+      source_description: null
+      source_required: null
+      note: Pull from HTAN center mappings file
+      map: |
+        list(source_col)
+    - target_attribute: middle_name
+      target_description: A means of identifying an individual by using a word or group
+        of words indicating a person's middle name.
+      target_cde: 2179590
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: last_name
+      target_description: A means of identifying an individual by using a word or group
+        of words indicating a person's last (family) name. Synonym = Last Name, Surname.
+      target_cde: 2179591
+      target_required: true
+      source_attribute: pi_last
+      source_description: null
+      source_required: null
+      note: Pull from HTAN center mappings file
+      map: |
+        list(source_col)
+    - target_attribute: suffix
+      target_description: Text term to represent an individual's position in a family
+        lineage or pedigree.
+      target_cde: 2006475
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: email
+      target_description: The string of characters that represents the electronic mail
+        address of a person.
+      target_cde: 2517550
+      target_required: true
+      source_attribute: pi_email
+      source_description: null
+      source_required: null
+      note: Pull from HTAN center mappings file
+      map: |
+        list(source_col)
+    - target_attribute: funding_agency
+      target_description: The name of the funding source organization or sponsor.
+      target_cde: 11524545
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: funding_source_program_name
+      target_description: The name of the program assigned by the funding agency.
+      target_cde: 11524546
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: grant_id
+      target_description: Unique alphanumeric Identifier of a grant funding resource
+        used to treat a patient on a study.
+      target_cde: 3434057
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: clinical_trial_repository
+      target_description: The name of the organization that provides the clinical trial
+        identifier.
+      target_cde: 11524547
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: clinical_trial_identifier
+      target_description: Identifier for the noted protocol, used by the Clinical Trial
+        Sponsor to uniquely identify the investigational protocol.
+      target_cde: 2649415
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: clinical_trial_arm
+      target_description: A treatment arm of the clinical trial.
+      target_cde: 11524548
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: organism_species
+      target_description: The organism from which the sample is derived or originated.
+      target_cde: 6118266
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: adult_or_childhood_study
+      target_description: The identifiable class of the study participant based upon
+        their age.
+      target_cde: 11524549
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: participant_id
+      target_description: A sequence of letters, numbers, or characters that uniquely
+        identifies the subject who has taken part in the investigation or research study.
+      target_cde: 12220014
+      target_required: true
+      source_attribute: HTAN Participant ID
+      source_description: HTAN ID associated with a patient based on HTAN ID SOP (eg HTANx_yyy )
+      source_required: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: gender
+      target_description: 'Text designations that identify gender. Gender is described
+        as the assemblage of properties that distinguish people on the basis of their
+        societal roles. [Explanatory Comment 1: Identification of gender is based upon
+        self-report and may come from a form, questionnaire, interview, etc.]'
+      target_cde: 2200604
+      target_required: false
+      source_attribute: Gender
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        [None if x == None else
+        ' '.join([word.title() if word not in ['or'] 
+        else word for word in str(x).split(' ')]) for x in list(source_col)]
+    - target_attribute: race
+      target_description: The text for reporting information about race based on the
+        Office of Management and Budget (OMB) categories.
+      target_cde: 2192199
+      target_required: false
+      source_attribute: Race
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['Unknown' if x == 'Other' else x for x in [' '.join(
+          [word.title() if word not in ['or','to'] else word for word in str(x).split(
+          ' ')]) if x is not None else x for x in list(source_col)]]
+    - target_attribute: ethnicity
+      target_description: The text for reporting information about ethnicity based on
+        the Office of Management and Budget (OMB) categories.
+      target_cde: 2192217
+      target_required: false
+      source_attribute: Ethnicity
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        [' '.join([word.title() if word not in ['or'] else word for word in str(x).split(' ')]) if x is not None else x for x in list(source_col)]
+    - target_attribute: dbGaP_subject_id
+      target_description: The unique alphanumeric identifier assigned to a study participant
+        by the database of Genotypes and Phenotypes (dbGaP).
+      target_cde: 11524550
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: sample_id
+      target_description: A unique sequence of alphanumeric characters used to identify
+        the specimen at it's point of origin.
+      target_cde: 6921892
+      target_required: true
+      source_attribute: HTAN Biospecimen ID
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: sample_description
+      target_description: Text description of a sample or specimen.
+      target_cde: 2003907
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: biosample_accession
+      target_description: The alphanumeric identifier assigned to the specimen to uniquely
+        identify it.
+      target_cde: 2230047
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: sample_type
+      target_description: The kind of material that forms the sample.
+      target_cde: 13255982
+      target_required: true
+      source_attribute: Biospecimen Type
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['Cell' if x == 'Cells Biospecimen Type'
+        else 'Body Fluid' if x == 'Fluids Biospecimen Type'
+        else x.replace(' Biospecimen Type','')
+        if isinstance(x,str) else x
+        for x in list(source_col)]
+    - target_attribute: sample_type_category
+      target_description: The biospecimen grouping that describes the kind of material
+        that forms the sample.
+      target_cde: 12445832
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: sample_tumor_status
+      target_description: Text term that represents a description of the kind of tissue
+        collected with respect to disease status or proximity to tumor tissue.
+      target_cde: 5432687
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: sample_anatomic_site
+      target_description: Text term that represents the name of the primary disease
+        site of the submitted tumor sample.
+      target_cde: 12083894
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: sample_age_at_collection
+      target_description: The number of days from the date a sample was collected to
+        the date of the initial pathologic diagnosis.
+      target_cde: 11253404
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: derived_from_specimen
+      target_description: One or more characters used to identify the parent substance,
+        or portion of material obtained for use in testing, examination, or study.
+      target_cde: 5581201
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: file_name
+      target_description: The literal label for an electronic data file.
+      target_cde: 11284037
+      target_required: true
+      source_attribute: Filename
+      source_description: null
+      source_required: null
+      note: Pull basename of HTAN file path
+      map: |
+        exec("import os") or [os.path.basename(x).replace(' ','') for x in list(source_col)]
+    - target_attribute: file_type
+      target_description: A defined organization or layout representing and structuring
+        data in a computer file.
+      target_cde: 11416926
+      target_required: true
+      source_attribute: File Format
+      source_description: null
+      source_required: null
+      note: Map file type based on file extension
+      map: |
+        [x.upper() if x != 'gzip' else 'FASTQ' for x in list(source_col)]
+        #['FASTQ' if any(s in x for s in ['fq','fastq']) 
+        #else 'BAM' if 'bam' in x else None for x in list(source_col)]
+    - target_attribute: file_size
+      target_description: The measure (in bytes) of how much space a data file takes
+        up on a storage medium.
+      target_cde: 11479876
+      target_required: true
+      source_attribute: File_Size
+      source_description: null
+      source_required: null
+      note: Pull from BQ table
+      map: |
+        list(source_col)
+    - target_attribute: md5sum
+      target_description: A 32-character hexadecimal number that is computed on a file.
+      target_cde: 11556150
+      target_required: true
+      source_attribute: md5
+      source_description: null
+      source_required: null
+      note: Pull from BQ table
+      map: |
+        list(source_col)
+    - target_attribute: file_url_in_cds
+      target_description: The specification of a node (file or directory) in a hierarchical
+        file system where an electronic file is located.
+      target_cde: 11556141
+      target_required: true
+      source_attribute: file_url_in_cds
+      source_description: null
+      source_required: null
+      note: Manual addition to source metadata table. Derived from 
+          Filename HTAN attribute
+      map: |
+        list(source_col)
+    - target_attribute: checksum_value
+      target_description: One or more characters using a irreversible unique number
+        generated from a string of text to identify a set of related electronic records.
+      target_cde: 11480133
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: checksum_algorithm
+      target_description: The method by which the file checksum was calculated.
+      target_cde: 11475057
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: file_mapping_level
+      target_description: Describes if the file is associated with the Participant,
+        a Sample, or a Study.
+      target_cde: 11595478
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: library_id
+      target_description: A short unique identifier assigned to a nucleotide sequencing
+        library.
+      target_cde: 11555660
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: library_strategy
+      target_description: The overall strategy for the collection of double stranded
+        DNA fragments flanked by oligonucleotide sequence adapters to enable their analysis
+        by high-throughput sequencing.
+      target_cde: 6273393
+      target_required: true
+      source_attribute: Component
+      source_description: null
+      source_required: null
+      note: Infer from component name
+      map: |
+        ['WXS' if 'WES' in x 
+          else 'ATAC-seq' if 'ATAC' in x 
+          else 'Hi-C' if 'Hi-C' in x
+          else 'Bisulfite-Seq' if 'BulkMethyl' in x
+          else 'RNA-Seq' 
+          for x in source_col]
+    - target_attribute: library_source
+      target_description: The source of a sample collection of double stranded DNA fragments
+        analyzed by high-throughput sequencing.
+      target_cde: 6285979
+      target_required: true
+      source_attribute: Component
+      source_description: null
+      source_required: null
+      note: Map from HTAN Component
+      map: |
+        ['TRANSCRIPTOMIC SINGLE CELL' if any(s in x for s in ['RNA-seq','ScRNA'])
+        else 'GENOMIC SINGLE CELL' if 'ScATAC' in x 
+        else 'TRANSCRIPTOMIC' if 'BulkRNA' in x
+        else 'GENOMIC' if any(s in x for s in ['BulkWES','BulkMethyl','HI-C'])
+        else None
+        for x in source_col]
+    - target_attribute: library_selection
+      target_description: The type of systematic actions performed to select or enrich
+        DNA fragments used in analysis by high-throughput sequencing.
+      target_cde: 6347743
+      target_required: true
+      source_attribute: Library Selection Method
+      source_description: null
+      source_required: null
+      note: null
+      dict: {
+        'Random': 'RANDOM',
+        'Other': 'other',
+        'rRNA Depletion': 'Inverse rRNA'
+      }
+      map: |
+        [dict.get(x, x) for x in list(source_col)]
+    - target_attribute: library_layout
+      target_description: The read strategy or method that was used for sequencing and
+        analysis of a nucleotide library.
+      target_cde: 11527735
+      target_required: true
+      source_attribute: Library Layout
+      source_description: null
+      source_required: null
+      note: null
+      dict: {
+        'Single Read': 'Single-end',
+        'Paired End': 'Paired-end'
+      }
+      map: |
+        [dict.get(x, x) for x in list(source_col)]
+    - target_attribute: platform
+      target_description: The words used to describe the  instrument used to carry out
+        a high-throughput sequencing experiment.
+      target_cde: 6347771
+      target_required: true
+      source_attribute: Sequencing Platform
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        [None if x in ['Not Reported', 'Other', 'unknown']
+        else 'ILLUMINA' if x in ['NovaSeq 6000', 'NovaSeqS4']
+        else x.split(' ')[0].upper() if isinstance(x, str) 
+        else x for x in source_col]
+    - target_attribute: instrument_model
+      target_description: The words used to describe the specific model of the instrument
+        used to carry out a high-throughput sequencing experiment.
+      target_cde: 6352164
+      target_required: true
+      source_attribute: Sequencing Platform
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['Illumina NovaSeq 6000' if x in ['NovaSeq 6000','NovaSeqS4']
+        else 'HiSeq X Ten' if x == 'Illumina HiSeq X Ten'
+        else 'NextSeq 500' if x == 'Illumina Next Seq 500'
+        else 'Illumina NextSeq' if x == 'Illumina Next Seq 2500'
+        else None if x in ['Other','Not Reported','unknown']
+        else x.replace('Next Seq','NextSeq') 
+        if isinstance(x,str) else x
+        for x in list(source_col)]
+    - target_attribute: design_description
+      target_description: A written description of the materials and methods used to
+        create the sequencing library.
+      target_cde: 11529028
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: reference_genome_assembly
+      target_description: One or more characters used to identify the published NCBI
+        genetic sequence that is used as a reference against which other sequences are
+        compared.
+      target_cde: 11529031
+      target_required: true
+      source_attribute: Genomic Reference
+      source_description: null
+      source_required: null
+      note: Free text field in HTAN. Performing minimal mapping e.g. hg19 --> GRCh37 for CDS
+      dict: {
+        'hg19': 'GRCh37',
+        'hg38_long_polya': 'GRCh38_long_polya',
+        'Release 31 (GRCh38.p12)': 'GRCh38.p12'
+      }
+      map: |
+        [dict.get(x, x) for x in list(source_col)]
+    - target_attribute: custom_assembly_fasta_file_for_alignment
+      target_description: The name of the custom assembly FASTA file used during sequence
+        alignment.
+      target_cde: 11636299
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: bases
+      target_description: The number of unique nucleobases assigned to each peak found
+        in a raw chromatogram (trace) obtained during nucleotide sequencing of a genomic
+        region of interest.
+      target_cde: 12373573
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: number_of_reads
+      target_description: The number of sequencing reaction results that were pooled
+        to assemble a sequence for a genomic region of interest.
+      target_cde: 11529035
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: coverage
+      target_description: The number of times a particular locus (site, nucleotide,
+        amplicon, region) was sequenced.
+      target_cde: 11556322
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: avg_read_length
+      target_description: The average length for nucleic acid sequencing reads obtained
+        after completion of the sequencing process.
+      target_cde: 12426615
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: sequence_alignment_software
+      target_description: The name of the software program used to align nucleotide
+        sequencing data.
+      target_cde: 11529072
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: reporter_label
+      target_description: The text term used to describe the labeled methyl group used
+        as a molecular tag.
+      target_cde: 12033929
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: methylation_platform
+      target_description: The equipment used to detect the presence and/or location
+        of methyl groups during DNA or protein analysis.
+      target_cde: 12033935
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: disease_type
+      target_description: The text term used to describe the type of malignant disease,
+        as categorized by the World Health Organization's (WHO) International Classification
+        of Diseases for Oncology (ICD-O).
+      target_cde: 13471160
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: primary_diagnosis
+      target_description: The location within the body where cancer begins as captured
+        in the topography names of the International Classification of Diseases for
+        Oncology, 3rd Edition (ICD-O-3). Example - Overlapping lesion of tongue
+      target_cde: 6161032
+      target_required: true
+      source_attribute: Primary Diagnosis
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['Unknown' if x == 'unknown' else x for x in list(source_col)]
+    - target_attribute: primary_site
+      target_description: The location within the body where cancer begins as captured
+        in the topography names of the International Classification of Diseases for
+        Oncology, 3rd Edition (ICD-O-3). Example - Overlapping lesion of tongue
+      target_cde: 13279286
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: vital_status
+      target_description: The response to a question that describes a participant's
+        survival status.
+      target_cde: 2847330
+      target_required: false
+      source_attribute: Vital Status
+      source_description: null
+      source_required: null
+      note: Not providing to CDS as optional & contributing to inconsistent joined records
+    - target_attribute: age_at_diagnosis
+      target_description: Age at the time of diagnosis expressed in number of days since
+        birth.
+      target_cde: 10609539
+      target_required: false
+      source_attribute: age_at_diagnosis_years
+      source_description: null
+      source_required: null
+      note: Requires mapping from days to years
+      map: |
+        list(source_col)
+    - target_attribute: days_to_last_followup
+      target_description: The number of days from the date the initial cancer diagnosis
+        was made to the date of the last followup.
+      target_cde: 12426616
+      target_required: false
+      source_attribute: Days to Last Follow up
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['' if x in ['Unknown','unknown','Not Applicable'] else x for x in list(source_col)]
+    - target_attribute: morphology
+      target_description: The coded result of analyzing the microscopic anatomy of normal
+        and abnormal cells and tissues of the specimen by examining a thin slice (section)
+        under a light (optical) or electron microscope. The code represents the histology
+        of the disease using the third edition of the International Classification of
+        Diseases for Oncology.
+      target_cde: 11326261
+      target_required: false
+      source_attribute: Morphology
+      source_description: null
+      source_required: null
+      note: Not providing due to PV mismatch and attrib is optional in target template
+    - target_attribute: tissue_or_organ_of_origin
+      target_description: The text term used to describe the anatomic site of origin,
+        of the patient's malignant disease, as described by the World Health Organization's
+        (WHO) International Classification of Diseases for Oncology (ICD-O).
+      target_cde: 12432573
+      target_required: false
+      source_attribute: Tissue or Organ of Origin
+      source_description: null
+      source_required: null
+      note: null
+      dict: {
+        'Abdomen NOS': 'Abdomen',
+        'Adrenal gland NOS': 'Adrenal Gland',
+        'Anus NOS': 'Anus',
+        'Anterior 2/3 of tongue NOS': 'Anterior 2/3 of tongue',
+        'Base of tongue NOS': 'Base of the Tongue',
+        'Body of pancreas': 'Body of the Pancreas',
+        'Brain NOS': 'Brain',
+        'Breast NOS': 'Breast',
+        'Cheek mucosa': 'Buccal Mucosa',
+        'Colon NOS': 'Colon',
+        'Connective subcutaneous and other soft tissues NOS': 'Connective Tissue',
+        'Floor of mouth NOS': 'Floor of mouth',
+        'Head of pancreas': 'Head of the Pancreas',
+        'Kidney NOS': 'Kidney',
+        'Larynx NOS': 'Larynx',
+        'Lower limb NOS': 'Lower Extremity',
+        'Lower-outer quadrant of breast': 'Lower-Outer Quadrant of the Breast',
+        'Lung NOS': 'Lung',
+        'Lymph node NOS': 'Lymph Node',
+        'Lymph nodes of axilla or arm': 'Lymph Node',
+        'Lymph nodes of inguinal region or leg': 'Lymph Node of Inguinal Region or Leg',
+        'Major salivary gland NOS': 'Salivary Gland',
+        'Overlapping lesion of breast': 'Breast',
+        'Pancreas NOS': 'Pancreas',
+        'Rectosigmoid junction': 'Rectosigmoid Region',
+        'Rectum NOS': 'Rectum',
+        'Retromolar area': 'Retromolar Trigone',
+        'Skin of lower limb and hip': 'Skin of the Lower Limb and Hip',
+        'Skin of scalp and neck': 'Skin of the Scalp and Neck',
+        'Skin of trunk': 'Skin of the Trunk',
+        'Skin of upper limb and shoulder': 'Skin of the Upper Limb and Shoulder',
+        'unknown': 'Unknown',
+        'Unknown Primary Site': '',
+        'Upper-inner quadrant of breast': 'Upper-Inner Quadrant of the Breast',
+        'Upper limb NOS': 'Upper Extremity',
+        'Upper-outer quadrant of breast': 'Upper-Outer Quadrant of the Breast',
+        'Vulva NOS': 'Vulva'
+      }
+      map: |
+        [dict.get(x, x) for x in list(source_col)]
+    - target_attribute: site_of_resection_or_biopsy
+      target_description: The organ or part of the body resected or biopsied, as described
+        by the topography codes of the International Classification of Diseases for
+        Oncology, 3rd Edition (ICD-O-3).
+      target_cde: 12432572
+      target_required: false
+      source_attribute: Site of Resection or Biopsy
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['Unknown' if x == 'unknown'
+        else x for x in list(source_col)]
+    - target_attribute: tumor_grade
+      target_description: A text term to express the degree of abnormality of cancer
+        cells as a measure of differentiation and aggressiveness.
+      target_cde: 11325685
+      target_required: false
+      source_attribute: Tumor Grade
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        [None if x == 'Not Applicable'
+        else str(x).title() if x is not None 
+        else x for x in list(source_col)] 
+    - target_attribute: tumor_stage_clinical_t
+      target_description: Extent of the primary cancer based on evidence obtained from
+        clinical assessment parameters determined prior to treatment.
+      target_cde: 3440328
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: tumor_stage_clinical_n
+      target_description: Extent of the regional lymph node involvement for the cancer
+        based on evidence obtained from clinical assessment parameters determined prior
+        to treatment.
+      target_cde: 3440330
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: tumor_stage_clinical_m
+      target_description: Extent of the distant metastasis for the cancer based on evidence
+        obtained from clinical assessment parameters determined prior to treatment.
+      target_cde: 3440331
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: progression_or_recurrence
+      target_description: A response to indicate whether or not a subject has a progressive
+        disease or a recurrent disease
+      target_cde: 13529783
+      target_required: false
+      source_attribute: Progression or Recurrence
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['Yes' if x == 'Yes - Progression or Recurrence'
+        else str(x).title() if x is not None
+        else x for x in list(source_col)]
+    - target_attribute: days_to_recurrence
+      target_description: The number of days from the date the first treatment was administered
+        to the date of disease recurrence.
+      target_cde: 12432576
+      target_required: false
+      source_attribute: Days to Recurrence
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['' if x in ['unknown','Not Applicable'] 
+         else int(float(x)) if isinstance(x, str) and x.replace('.', '').isdigit()
+        else x for x in list(source_col)]    
+    - target_attribute: days_to_last_known_disease_status
+      target_description: The number of days from the date of the initial cancer diagnosis
+        to the date of last known disease status.
+      target_cde: 12447170
+      target_required: false
+      source_attribute: Days to Last Known Disease Status
+      source_description: null
+      source_required: null
+      note: null
+      map: |
+        ['' if x in ['Unknown','unknown','Not Applicable'] else x for x in list(source_col)]
+    - target_attribute: last_known_disease_status
+      target_description: Text term that describes the last known state or condition
+        of an individual's neoplasm.
+      target_cde: 12447172
+      target_required: false
+      source_attribute: Last Known Disease Status
+      source_description: null
+      source_required: null
+
+      note: Not providing due to PV mismatch and attrib is optional in target template
+    - target_attribute: treatment_type
+      target_description: Text term that describes the kind of treatment administered.
+      target_cde: 5102381
+      target_required: false
+      source_attribute: Treatment Type
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: days_to_treatment
+      target_description: null
+      target_cde: 12447194
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: treatment_outcome
+      target_description: Text term that describes the patient's final outcome after
+        the treatment was administered.
+      target_cde: 5102383
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: therapeutic_agents
+      target_description: Text identification of the individual agent(s) used as part
+        of a prior treatment regimen.
+      target_cde: 2975232
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: HTAN_Data_File_ID
+      target_description: Self-identifier for this data file - HTAN ID of this file HTAN ID SOP (eg HTANx_yyy_zzz)
+      target_required: false
+      source_attribute: HTAN Data File ID
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+CDS Imaging Collection Information:
+  source_name: HTAN Data Model
+  target_version: v1.3.2
+  source_version: v26.6.1
+  attributes:
+    - target_attribute: study_name
+      target_description: The narrative title used as a textual label for a
+        research data collection. Example-- Comparative Molecular Life History
+        of Spontaneous Canine and Human Gliomas
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      fixed_value: Human Tumor Atlas Network (HTAN) imaging data
+      note: null
+    - target_attribute: study_acronym
+      target_description: The acronym or abbreviated form of the title for a
+        research data collection. Example-- GLIOMA01
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      fixed_value: HTAN
+      note: null
+    - target_attribute: cancer_type
+      target_description: null
+      target_required: true
+      source_attribute: cancer_type
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Needed for IDC dashboard https://portal.imaging.datacommons.cancer.gov/collections/
+        source_attribute is manual addition by DCC. Derived from Tissue or Organ of Origin
+      map: |
+        list(source_col)
+    - target_attribute: number_of_participants
+      target_description:
+        The number of unique participant instances associated with
+        a systematic investigation into a subject.
+      target_required: true
+      source_attribute: HTAN Participant ID
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+      map: |
+        len(set(source_col))
+    - target_attribute: de-identification_method_type
+      target_description: General description of the de-identification method
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: Manual
+        Semiautomatic
+        Automatic
+        Not applicable
+      note: Confirm if we set this as manual or semi-automatic for all.
+      fixed_value: manual
+    - target_attribute: de-identification_method_description
+      target_description: >
+        Description of the process of removing potentially 
+        identifying data or data elements to render data into a form that does 
+        not identify individuals and where identification is not likely to 
+        take place.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: de-identification_software
+      target_description: >
+        Software that was used to de-identify the images (if used)
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: license
+      target_description: >
+        Official or legal permission to do or own a specified thing.
+      target_required: true
+      source_attribute: HTAN_Center
+      source_description: null
+      source_required: null
+      valid_values:
+        - CC BY 3.0    http://creativecommons.org/licenses/by/3.0/
+        - CC BY 4.0    https://creativecommons.org/licenses/by/4.0/
+        - CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
+        - CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+        - Other
+      fixed_value: "CC BY 4.0    https://creativecommons.org/licenses/by/4.0/"
+      note: null
+    - target_attribute: citation_or_DOI
+      target_description: >
+        Publication and/or digital object identifier of the publication
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      fixed_value: null
+      note: null
+    - target_attribute: phs_accession
+      target_description:
+        A stable unique alphanumeric identifier assigned to a study
+        and any objects by the database of Genotypes and Phenotypes (dbGaP).
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+      fixed_value: phs002371
+    - target_attribute: acl
+      target_description:
+        A free text field used to document whether the data in a repository
+        is open access or controlled access.
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      fixed_value: ['*']
+      note: null
+    - target_attribute: role_or_affiliation
+      target_description:
+        The text that describes the distinguishable characteristics
+        of the action or activity assigned to or required or expected of a person in
+        a formal association with a group or organization.
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      fixed_value: Principal Investigator
+      note: null
+    - target_attribute: title
+      target_description:
+        The abbreviation that represents an affix occurring at or
+        before the beginning of an individual's name.
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      fixed_value: Dr.
+      note: null
+    - target_attribute: first_name
+      target_description:
+        A word or group of words indicating a person's first (personal
+        or given) name; the name that precedes the surname. Synonym = Given Name.
+      target_required: true
+      source_attribute: pi_first
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Manual addition to source metadata table
+      map: |
+        list(source_col)
+    - target_attribute: middle_name
+      target_description:
+        A means of identifying an individual by using a word or group
+        of words indicating a person's middle name.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: last_name
+      target_description:
+        A means of identifying an individual by using a word or group
+        of words indicating a person's last (family) name. Synonym = Last Name, Surname.
+      target_required: true
+      source_attribute: pi_last
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Manual addition to source metadata table
+      map: |
+        list(source_col)
+    - target_attribute: suffix
+      target_description:
+        Text term to represent an individual's position in a family
+        lineage or pedigree.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: email
+      target_description: The string of characters that represents the electronic mail
+        address of a person.
+      target_required: true
+      source_attribute: pi_email
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Manual addition to source metadata table
+      map: |
+        list(source_col)
+    - target_attribute: participant_id
+      target_description:
+        A sequence of letters, numbers, or characters that uniquely
+        identifies the subject who has taken part in the investigation or research study.
+      target_required: true
+      source_attribute: HTAN Participant ID
+      source_description: HTAN ID associated with a patient based on HTAN ID SOP (eg HTANx_yyy )
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+CDS Imaging Participant Information:
+  source_name: HTAN Data Model
+  target_version: v1.3.2
+  source_version: v26.6.1
+  attributes:
+    - target_attribute: participant_id
+      target_description:
+        A sequence of letters, numbers, or characters that uniquely
+        identifies the subject who has taken part in the investigation or research study.
+      target_required: true
+      source_attribute: HTAN Participant ID
+      source_description: HTAN ID associated with a patient based on HTAN ID SOP (eg HTANx_yyy )
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: gender
+      target_description:
+        "Text designations that identify gender. Gender is described
+        as the assemblage of properties that distinguish people on the basis of their
+        societal roles. [Explanatory Comment 1: Identification of gender is based upon
+        self-report and may come from a form, questionnaire, interview, etc.]"
+      target_required: false
+      source_attribute: Gender
+      source_description:
+        "Text designations that identify gender. Gender is described as
+        the assemblage of properties that distinguish people on the basis of their societal roles.
+        [Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.]"
+      source_required: true
+      valid_values:
+        -Female
+        -Male
+        -Unknown
+        -Non-Binary
+        -Not Reported
+        -Prefer Not to Answer
+        -Unknown
+      note: null
+      map: |
+        ['Not Reported' if x == None else
+        ' '.join([word.title() if word not in ['or'] 
+        else word for word in str(x).split(' ')]) for x in list(source_col)]
+    - target_attribute: race
+      target_description:
+        The text for reporting information about race based on the
+        Office of Management and Budget (OMB) categories.
+      target_required: false
+      source_attribute: Race
+      source_description:
+        An arbitrary classification of a taxonomic group that is a division of a species.
+        It usually arises as a consequence of geographical isolation withina a species and is characterized by
+        shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality,
+        or geographic distribution.
+      source_required: true
+      valid_values:
+        -White
+        -American Indian or Alaska Native
+        -Black or African American
+        -Asian
+        -Native Hawaiian or Other Pacific Islander
+        -Unknown
+        -Not Reported
+        -Not Allowed to Collect
+      note: null
+      map: |
+        ['Unknown' if x == 'Other' else x for x in [' '.join(
+          [word.title() if word not in ['or'] else word for word in str(x).split(
+          ' ')]) if x is not None else x for x in list(source_col)]]
+    - target_attribute: ethnicity
+      target_description:
+        The text for reporting information about ethnicity based on
+        the Office of Management and Budget (OMB) categories.
+      target_required: false
+      source_attribute: Ethnicity
+      source_description:
+        An individual's self-described social and cultural grouping, specifically
+        whether an individual describes themselves as Hispanic or Latino. The provided values are based
+        on the categories defined by the U.S. Office of Management and Business and used by
+        the U.S. Census Bureau.
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        [' '.join([word.title() if word not in ['or'] else word for word in str(x).split(' ')]) if x is not None else x for x in list(source_col)]
+    - target_attribute: dbGaP_subject_id
+      target_description:
+        The unique alphanumeric identifier assigned to a study participant
+        by the database of Genotypes and Phenotypes (dbGaP).
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: disease_type
+      target_description:
+        The text term used to describe the type of malignant disease,
+        as categorized by the World Health Organization's (WHO) International Classification
+        of Diseases for Oncology (ICD-O).
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: primary_diagnosis
+      target_description:
+        An alphanumeric value from the 2022 extension of the tenth
+        version of the International Classification of Disease (ICD-10-CM, the disease
+        code subset of ICD-10) used to identify the diagnosis in humans.
+      target_required: true
+      source_attribute: Primary Diagnosis
+      source_description:
+        Text term used to describe the patient's histologic diagnosis,
+        as described by the World Health Organization's (WHO) International Classification
+        of Diseases for Oncology (ICD-O).
+      source_required: true
+      valid_values: null
+      note: CDS requires alpharnumeric value but we have the text value. Do we intend to do the mapping?
+      map: |
+        ['Unknown' if x == 'unknown' else x for x in list(source_col)]
+    - target_attribute: primary_site
+      target_description:
+        The location within the body where cancer begins as captured
+        in the topography names of the International Classification of Diseases for
+        Oncology, 3rd Edition (ICD-O-3). Example - Overlapping lesion of tongue
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: vital_status
+      target_description:
+        The response to a question that describes a participant's
+        survival status.
+      target_required: false
+      source_attribute: Vital Status
+      source_description: The survival state of the person registered on the protocol.
+      source_required: true
+      valid_values: null
+      note: null
+      #map: |
+        #[' '.join([word.title() if word not in ['or'] else word for word in x.split(' ')]) for x in list(source_col)]
+    - target_attribute: age_at_diagnosis
+      target_description:
+        Age at the time of diagnosis expressed in number of days since
+        birth.
+      target_required: false
+      source_attribute: age_at_diagnosis_years
+      source_description: Age at the time of diagnosis expressed in number of days since birth.
+      source_required: true
+      valid_values: null
+      note: Requires mapping from days to years
+      map: |
+        list(source_col)
+    - target_attribute: days_to_last_followup
+      target_description:
+        The number of days from the date the initial cancer diagnosis
+        was made to the date of the last followup.
+      target_required: false
+      source_attribute: Days to Last Follow up
+      source_description:
+        Time interval from the date of last follow up to the date of
+        initial pathologic diagnosis, represented as a calculated number of days.
+        If not applicable please enter 'Not Applicable'
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        ['' if x in ['Unknown','unknown','Not Applicable'] else x for x in list(source_col)]
+    - target_attribute: morphology
+      target_description:
+        The coded result of analyzing the microscopic anatomy of normal
+        and abnormal cells and tissues of the specimen by examining a thin slice (section)
+        under a light (optical) or electron microscope. The code represents the histology
+        of the disease using the third edition of the International Classification of
+        Diseases for Oncology.
+      target_required: false
+      source_attribute: Morphology
+      source_description:
+        The third edition of the International Classification of Diseases
+        for Oncology, published in 2000 used principally in tumor and cancer registries for
+        coding the site (topography) and the histology (morphology) of neoplasms. The study
+        of the structure of the cells and their arrangement to constitute tissues and, finally,
+        the association among these to form organs. In pathology, the microscopic process of
+        identifying normal and abnormal morphologic characteristics in tissues, by employing
+        various cytochemical and immunocytochemical stains. A system of numbered categories
+        for representation of data.
+      source_required: true
+      valid_values: null
+      note: null
+    - target_attribute: tissue_or_organ_of_origin
+      target_description:
+        The text term used to describe the anatomic site of origin,
+        of the patient's malignant disease, as described by the World Health Organization's
+        (WHO) International Classification of Diseases for Oncology (ICD-O).
+      target_required: false
+      source_attribute: Tissue or Organ of Origin
+      source_description:
+        The text term used to describe the anatomic site of origin, of the
+        patient's malignant disease, as described by the World Health Organization's (WHO)
+        International Classification of Diseases for Oncology (ICD-O).
+      source_required: true
+      valid_values: null
+      note: null
+      dict: {
+        'Abdomen NOS': 'Abdomen',
+        'Adrenal gland NOS': 'Adrenal Gland',
+        'Anus NOS': 'Anus',
+        'Anterior 2/3 of tongue NOS': 'Anterior 2/3 of tongue',
+        'Ascending colon': 'Ascending Colon',
+        'Base of tongue NOS': 'Base of the Tongue',
+        'Body of pancreas': 'Body of the Pancreas',
+        'Brain NOS': 'Brain',
+        'Breast NOS': 'Breast',
+        'Cheek mucosa': 'Buccal Mucosa',
+        'Colon NOS': 'Colon',
+        'Connective subcutaneous and other soft tissues NOS': 'Connective Tissue',
+        'Descending colon': 'Descending Colon',
+        'Floor of mouth NOS': 'Floor of mouth',
+        'Head of pancreas': 'Head of the Pancreas',
+        'Kidney NOS': 'Kidney',
+        'Larynx NOS': 'Larynx',
+        'Lower limb NOS': 'Lower Extremity',
+        'Lower lobe lung': 'Lower Lobe of the Lung',
+        'Lower-outer quadrant of breast': 'Lower-Outer Quadrant of the Breast',
+        'Lung NOS': 'Lung',
+        'Lymph node NOS': 'Lymph Node',
+        'Lymph nodes of axilla or arm': 'Lymph Node',
+        'Lymph nodes of inguinal region or leg': 'Lymph Node of Inguinal Region or Leg',
+        'Major salivary gland NOS': 'Salivary Gland',
+        'Overlapping lesion of breast': 'Breast',
+        'Pancreas NOS': 'Pancreas',
+        'Rectosigmoid junction': 'Rectosigmoid Region',
+        'Rectum NOS': 'Rectum',
+        'Retromolar area': 'Retromolar Trigone',
+        'Skin of lower limb and hip': 'Skin of the Lower Limb and Hip',
+        'Skin of scalp and neck': 'Skin of the Scalp and Neck',
+        'Skin of trunk': 'Skin of the Trunk',
+        'Skin of upper limb and shoulder': 'Skin of the Upper Limb and Shoulder',
+        'Transverse colon': 'Transverse Colon',
+        'unknown': 'Unknown',
+        'Unknown Primary Site': '',
+        'Upper-inner quadrant of breast': 'Upper-Inner Quadrant of the Breast',
+        'Upper limb NOS': 'Upper Extremity',
+        'Upper lobe lung': 'Upper Lobe of the Lung',
+        'Upper-outer quadrant of breast': 'Upper-Outer Quadrant of the Breast',
+        'Vulva NOS': 'Vulva'
+      }
+      map: |
+        [dict.get(x, x) for x in list(source_col)]
+    - target_attribute: site_of_resection_or_biopsy
+      target_description:
+        The organ or part of the body resected or biopsied, as described
+        by the topography codes of the International Classification of Diseases for
+        Oncology, 3rd Edition (ICD-O-3).
+      target_required: false
+      source_attribute: Site of Resection or Biopsy
+      source_description:
+        The text term used to describe the anatomic site of origin,
+        of the patient's malignant disease, as described by the World Health Organization's
+        (WHO) International Classification of Diseases for Oncology (ICD-O).
+      source_required: true
+      valid_values: 
+        -Abdomen, NOS  
+        -Abdominal esophagus  
+        -Accessory sinus, NOS  
+        -Acoustic nerve  
+        -Adrenal gland, NOS  
+        -Ampulla of Vater  
+        -Anal canal  
+        -Anterior 2/3 of tongue, NOS  
+        -Anterior floor of mouth  
+        -Anterior mediastinum  
+        -Anterior surface of epiglottis  
+        -Anterior wall of bladder  
+        -Anterior wall of nasopharynx  
+        -Anus, NOS  
+        -Aortic body and other paraganglia  
+        -Appendix  
+        -Ascending colon  
+        -Autonomic nervous system, NOS  
+        -Axillary tail of breast  
+        -Base of tongue, NOS  
+        -Bladder neck  
+        -Bladder, NOS  
+        -Blood  
+        -Body of pancreas  
+        -Body of penis  
+        -Body of stomach  
+        -Bone marrow  
+        -Bone of limb, NOS  
+        -Bone, NOS  
+        -Bones of skull and face and associated joints  
+        -Border of tongue  
+        -Brain stem  
+        -Brain, NOS  
+        -Branchial cleft  
+        -Breast, NOS  
+        -Broad ligament  
+        -Cardia, NOS  
+        -Carotid body  
+        -Cauda equina  
+        -Cecum  
+        -Central portion of breast  
+        -Cerebellum, NOS  
+        -Cerebral meninges  
+        -Cerebrum  
+        -Cervical esophagus  
+        -Cervix uteri  
+        -Choroid  
+        -Ciliary body  
+        -Cloacogenic zone  
+        -Colon, NOS  
+        -Commissure of lip  
+        -Conjunctiva  
+        -Connective, subcutaneous and other soft tissues of abdomen  
+        -Connective, subcutaneous and other soft tissues of head, face, and neck  
+        -Connective, subcutaneous and other soft tissues of lower limb and hip  
+        -Connective, subcutaneous and other soft tissues of pelvis  
+        -Connective, subcutaneous and other soft tissues of thorax  
+        -Connective, subcutaneous and other soft tissues of trunk, NOS  
+        -Connective, subcutaneous and other soft tissues of upper limb and shoulder  
+        -Connective, subcutaneous and other soft tissues, NOS  
+        -Cornea, NOS
+        -Corpus uteri
+        -Cortex of adrenal gland
+        -Cranial nerve, NOS
+        -Craniopharyngeal duct  
+        -Descended testis  
+        -Descending colon  
+        -Dome of bladder  
+        -Dorsal surface of tongue, NOS  
+        -Duodenum  
+        -Endocervix  
+        -Endocrine gland, NOS  
+        -Endometrium  
+        -Epididymis  
+        -Esophagus, NOS  
+        -Ethmoid sinus  
+        -Exocervix  
+        -External ear  
+        -External lip, NOS  
+        -External lower lip  
+        -External upper lip  
+        -Extrahepatic bile duct  
+        -Eye, NOS  
+        -Eyelid  
+        -Fallopian tube  
+        -Female genital tract, NOS  
+        -Floor of mouth, NOS  
+        -Frontal lobe  
+        -Frontal sinus  
+        -Fundus of stomach  
+        -Fundus uteri  
+        -Gallbladder  
+        -Gastric antrum  
+        -Gastrointestinal tract, NOS  
+        -Glans penis  
+        -Glottis  
+        -Greater curvature of stomach, NOS  
+        -Gum, NOS  
+        -Hard palate  
+        -Head of pancreas  
+        -Head, face or neck, NOS  
+        -Heart  
+        -Hematopoietic system, NOS  
+        -Hepatic flexure of colon  
+        -Hypopharyngeal aspect of aryepiglottic fold  
+        -Hypopharynx, NOS  
+        -Ileum  
+        -Ill-defined sites within respiratory system  
+        -Intestinal tract, NOS  
+        -Intra-abdominal lymph nodes  
+        -Intrahepatic bile duct  
+        -Intrathoracic lymph nodes  
+        -Islets of Langerhans  
+        -Isthmus uteri  
+        -Jejunum  
+        -Kidney, NOS  
+        -Labium majus  
+        -Labium minus  
+        -Lacrimal gland  
+        -Laryngeal cartilage  
+        -Larynx, NOS  
+        -Lateral floor of mouth  
+        -Lateral wall of bladder  
+        -Lateral wall of nasopharynx  
+        -Lateral wall of oropharynx  
+        -Lesser curvature of stomach, NOS  
+        -Lingual tonsil  
+        -Lip, NOS  
+        -Liver  
+        -Long bones of lower limb and associated joints  
+        -Long bones of upper limb, scapula and associated joints  
+        -Lower gum  
+        -Lower limb, NOS  
+        -Lower lobe, lung  
+        -Lower third of esophagus  
+        -Lower-inner quadrant of breast  
+        -Lower-outer quadrant of breast  
+        -Lung, NOS  
+        -Lymph node, NOS  
+        -Lymph nodes of axilla or arm  
+        -Lymph nodes of head, face and neck  
+        -Lymph nodes of inguinal region or leg  
+        -Lymph nodes of multiple regions  
+        -Main bronchus  
+        -Major salivary gland, NOS  
+        -Male genital organs, NOS  
+        -Mandible  
+        -Maxillary sinus  
+        -Meckel diverticulum  
+        -Mediastinum, NOS  
+        -Medulla of adrenal gland  
+        -Meninges, NOS  
+        -Middle ear  
+        -Middle lobe, lung  
+        -Middle third of esophagus  
+        -Mouth, NOS  
+        -Mucosa of lip, NOS  
+        -Mucosa of lower lip  
+        -Mucosa of upper lip  
+        -Myometrium  
+        -Nasal cavity  
+        -Nasopharynx, NOS  
+        -Nervous system, NOS  
+        -Nipple  
+        -Occipital lobe  
+        -Olfactory nerve  
+        -Optic nerve  
+        -Orbit, NOS  
+        -Oropharynx, NOS  
+        -Other ill-defined sites  
+        -Other specified parts of female genital organs  
+        -Other specified parts of male genital organs  
+        -Other specified parts of pancreas  
+        -Ovary  
+        -Overlapping lesion of accessory sinuses  
+        -Overlapping lesion of bladder  
+        -Overlapping lesion of bones, joints and articular cartilage  
+        -Overlapping lesion of bones, joints and articular cartilage of limbs  
+        -Overlapping lesion of brain  
+        -Overlapping lesion of brain and central nervous system  
+        -Overlapping lesion of breast  
+        -Overlapping lesion of cervix uteri  
+        -Overlapping lesion of colon  
+        -Overlapping lesion of connective, subcutaneous and other soft tissues  
+        -Overlapping lesion of corpus uteri  
+        -Overlapping lesion of digestive system  
+        -Overlapping lesion of endocrine glands and related structures  
+        -Overlapping lesion of esophagus  
+        -Overlapping lesion of eye and adnexa  
+        -Overlapping lesion of female genital organs  
+        -Overlapping lesion of floor of mouth  
+        -Overlapping lesion of heart, mediastinum and pleura  
+        -Overlapping lesion of hypopharynx  
+        -Overlapping lesion of ill-defined sites  
+        -Overlapping lesion of larynx  
+        -Overlapping lesion of lip  
+        -Overlapping lesion of lip, oral cavity and pharynx  
+        -Overlapping lesion of lung  
+        -Overlapping lesion of major salivary glands  
+        -Overlapping lesion of male genital organs  
+        -Overlapping lesion of nasopharynx  
+        -Overlapping lesion of other and unspecified parts of mouth  
+        -Overlapping lesion of palate  
+        -Overlapping lesion of pancreas  
+        -Overlapping lesion of penis  
+        -Overlapping lesion of peripheral nerves and autonomic nervous system  
+        -Overlapping lesion of rectum, anus and anal canal  
+        -Overlapping lesion of respiratory system and intrathoracic organs  
+        -Overlapping lesion of retroperitoneum and peritoneum  
+        -Overlapping lesion of skin  
+        -Overlapping lesion of small intestine  
+        -Overlapping lesion of stomach  
+        -Overlapping lesion of tongue  
+        -Overlapping lesion of tonsil  
+        -Overlapping lesion of urinary organs  
+        -Overlapping lesion of vulva  
+        -Overlapping lesions of oropharynx  
+        -Palate, NOS  
+        -Pancreas, NOS  
+        -Pancreatic duct  
+        -Parametrium  
+        -Parathyroid gland  
+        -Paraurethral gland  
+        -Parietal lobe  
+        -Parotid gland  
+        -Pelvic bones, sacrum, coccyx and associated joints  
+        -Pelvic lymph nodes  
+        -Pelvis, NOS  
+        -Penis, NOS  
+        -Peripheral nerves and autonomic nervous system of abdomen  
+        -Peripheral nerves and autonomic nervous system of head, face, and neck  
+        -Peripheral nerves and autonomic nervous system of lower limb and hip  
+        -Peripheral nerves and autonomic nervous system of pelvis  
+        -Peripheral nerves and autonomic nervous system of thorax  
+        -Peripheral nerves and autonomic nervous system of trunk, NOS  
+        -Peripheral nerves and autonomic nervous system of upper limb and shoulder  
+        -Peritoneum, NOS  
+        -Pharynx, NOS  
+        -Pineal gland  
+        -Pituitary gland  
+        -Placenta  
+        -Pleura, NOS  
+        -Postcricoid region  
+        -Posterior mediastinum  
+        -Posterior wall of bladder  
+        -Posterior wall of hypopharynx  
+        -Posterior wall of nasopharynx  
+        -Posterior wall of oropharynx  
+        -Prepuce  
+        -Prostate gland  
+        -Pylorus  
+        -Pyriform sinus  
+        -Rectosigmoid junction  
+        -Rectum, NOS  
+        -Renal pelvis  
+        -Reticuloendothelial system, NOS  
+        -Retina  
+        -Retromolar area  
+        -Retroperitoneum  
+        -Rib, sternum, clavicle and associated joints  
+        -Round ligament  
+        -Scrotum, NOS  
+        -Short bones of lower limb and associated joints  
+        -Short bones of upper limb and associated joints  
+        -Sigmoid colon  
+        -Skin of lip, NOS  
+        -Skin of lower limb and hip  
+        -Skin of other and unspecified parts of face  
+        -Skin of scalp and neck  
+        -Skin of trunk  
+        -Skin of upper limb and shoulder  
+        -Skin, NOS  
+        -Small intestine, NOS  
+        -Soft palate, NOS  
+        -Specified parts of peritoneum  
+        -Spermatic cord  
+        -Sphenoid sinus  
+        -Spinal cord  
+        -Spinal meninges  
+        -Spleen  
+        -Splenic flexure of colon  
+        -Stomach, NOS  
+        -Subglottis  
+        -Sublingual gland  
+        -Submandibular gland
+        -Superior wall of nasopharynx
+        -Supraglottis
+        -Tail of pancreas
+        -Temporal lobe
+        -Testis, NOS
+        -Thoracic esophagus
+        -Thorax, NOS
+        -Thymus
+        -Thyroid gland
+        -Tongue, NOS
+        -Tonsil, NOS
+        -Tonsillar fossa
+        -Tonsillar pillar
+        -Trachea
+        -Transverse colon
+        -Trigone of bladder
+        -Undescended testis
+        -Unknown primary site
+        -Upper gum
+        -Upper limb, NOS
+        -Upper lobe, lung
+        -Upper respiratory tract, NOS
+        -Upper third of esophagus
+        -Upper-inner quadrant of breast
+        -Upper-outer quadrant of breast
+        -Urachus
+        -Ureter
+        -Ureteric orifice
+        -Urethra
+        -Urinary system, NOS
+        -Uterine adnexa
+        -Uterus, NOS
+        -Uvula
+        -Vagina, NOS
+        -Vallecula
+        -Ventral surface of tongue, NOS
+        -Ventricle, NOS
+        -Vertebral column
+        -Vestibule of mouth
+        -Vulva, NOS
+        -Waldeyer ring
+        -Biliary tract, NOS
+        -Cheek mucosa
+        -Clitoris
+        -Overlapping lesion of biliary tract
+        -Unknown
+        -Not Reported
+      note: null
+      map: |
+        ['Not Reported' if x == None else x for x in list(source_col)]
+    - target_attribute: tumor_grade
+      target_description:
+        A text term to express the degree of abnormality of cancer
+        cells as a measure of differentiation and aggressiveness.
+      target_required: false
+      source_attribute: Tumor Grade
+      source_description:
+        Numeric value to express the degree of abnormality of cancer
+        cells, a measure of differentiation and aggressiveness.
+      source_required: false
+      valid_values: null
+      note: null
+      map: |
+        [None if x == 'Not Applicable'
+        else str(x).title() if x is not None 
+        else x for x in list(source_col)]  
+    - target_attribute: tumor_stage_clinical_t
+      target_description:
+        Extent of the primary cancer based on evidence obtained from
+        clinical assessment parameters determined prior to treatment.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: tumor_stage_clinical_n
+      target_description:
+        Extent of the regional lymph node involvement for the cancer
+        based on evidence obtained from clinical assessment parameters determined prior
+        to treatment.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: tumor_stage_clinical_m
+      target_description:
+        Extent of the distant metastasis for the cancer based on evidence
+        obtained from clinical assessment parameters determined prior to treatment.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: progression_or_recurrence
+      target_description:
+        A response to indicate whether or not a subject has a progressive
+        disease or a recurrent disease
+      target_required: false
+      source_attribute: Progression or Recurrence
+      source_description:
+        Yes/No/unknown indicator to identify whether a patient has
+        had a new tumor event after initial treatment.
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        ['Yes' if x == 'Yes - Progression or Recurrence'
+        else str(x).title() if x is not None
+        else x for x in list(source_col)]
+    - target_attribute: days_to_recurrence
+      target_description:
+        The number of days from the date the first treatment was administered
+        to the date of disease recurrence.
+      target_required: false
+      source_attribute: Days to Recurrence
+      source_description:
+        Number of days between the date used for index and the date the patient's
+        disease recurred. If not applicable please enter 'Not Applicable'
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        ['' if x in ['unknown','Not Applicable'] 
+        else int(x) if x is not None
+        else x for x in list(source_col)]
+    - target_attribute: days_to_last_known_disease_status
+      target_description:
+        The number of days from the date of the initial cancer diagnosis
+        to the date of last known disease status.
+      target_required: false
+      source_attribute: Days to Last Known Disease Status
+      source_description:
+        Time interval from the date of last follow up to the date of initial
+        pathologic diagnosis, represented as a calculated number of days. If not applicable please
+        enter 'Not Applicable'
+      source_required: true
+      valid_values: null
+      note: Not providing due to PV mismatch and attrib is optional in target template
+    - target_attribute: last_known_disease_status
+      target_description:
+        Text term that describes the last known state or condition
+        of an individual's neoplasm.
+      target_required: false
+      source_attribute: Last Known Disease Status
+      source_description: Text term that describes the last known state or
+        condition of an individual's neoplasm.
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: treatment_type
+      target_description: Text term that describes the kind of treatment administered.
+      target_required: false
+      source_attribute: Treatment Type
+      source_description: Text term that describes the kind of treatment administered.
+      source_required: false
+      valid_values: null
+      note: Not providing treatment info as no nice way to accurately provide multiple 
+        treatment types pertaining to applicable diagnoses
+    - target_attribute: days_to_treatment
+      target_description:
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: treatment_outcome
+      target_description:
+        Text term that describes the patient's final outcome after
+        the treatment was administered.
+      target_required: false
+      source_attribute: Treatment Outcome
+      source_description: Text term that describes the patient's final outcome after the treatment was administered.
+      source_required: false
+      valid_values: null
+      note: null
+    - target_attribute: therapeutic_agents
+      target_description:
+        Text identification of the individual agent(s) used as part
+        of a prior treatment regimen.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+CDS Imaging File Specific General Information:
+  source_name: HTAN Data Model
+  target_version: v1.3.2
+  source_version: v26.6.1
+  attributes:
+    - target_attribute: participant_id
+      target_description:
+        A sequence of letters, numbers, or characters that uniquely
+        identifies the subject who has taken part in the investigation or research study.
+      target_required: true
+      source_attribute: HTAN Participant ID
+      source_description: HTAN ID associated with a patient based on HTAN ID SOP (eg HTANx_yyy )
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: file_name
+      target_description: The name by which a set of related records (either written or electronic) are known. CDE 6115804
+      target_required: true
+      source_attribute: Filename
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Pull basename of HTAN file path
+      map: |
+        exec("import os") or [os.path.basename(x).replace(' ','') for x in list(source_col)]
+    - target_attribute: file_format
+      target_description: Text that provides a description of a particular kind of set of related records. CDE 698162
+      target_required: true
+      source_attribute: File Format
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+      map: |
+        ['TIFF' if any(s in x for s in ['tif','tiff']) 
+        else 'OME-TIFF' if any(s in x for s in ['ome-tif','ome.tif','ome.tiff']) 
+        else x.upper() for x in list(source_col)]
+    - target_attribute: file_description
+      target_description: A freeform description of the file.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: file_mapping_level
+      target_description: Describes if the file belongs to a Participant, a Sample, or a Study. CDE is being created
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: file_size
+      target_description:
+        The measure (in bytes) of how much space a data file takes
+        up on a storage medium.
+      target_required: true
+      source_attribute: File_Size
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: File_Size available in BigQuery tables
+      map: |
+        list(source_col)
+    - target_attribute: md5sum
+      target_description: A 32-character hexadecimal number that is computed on a file.
+      target_required: true
+      source_attribute: md5
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: md5 available in BigQuery tables
+      map: |
+        list(source_col)
+    - target_attribute: file_url_in_cds
+      target_description: The specification of a node (file or directory) in a hierarchical
+        file system where an electronic file is located.
+      target_required: true
+      source_attribute: file_url_in_cds
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Manual addition to source metadata table. Derived from 
+        Filename HTAN attribute
+      map: |
+        list(source_col)
+    - target_attribute: imaging_modality
+      target_description: The method in which the images are generated.
+      target_required: true
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      fixed_value: SM
+      note: SM is the expected value for all HTAN imaging datasets.
+    - target_attribute: imaging_equipment_manufacturer
+      target_description: Producer of the imaging equipment that was used to generate the digital image
+      target_required: true
+      source_attribute: Microscope
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: May include both manfactuter and model
+      map: |
+        list(source_col)
+    - target_attribute: imaging_equipment_model
+      target_description: The words used to describe the specific model of the instrument used to carry out an imaging experiment.
+      target_required: false
+      source_attribute: Microscope
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: May include both manfactuter and model
+      map: |
+        list(source_col)
+    - target_attribute: imaging_software
+      target_description: >
+        The name of the software package that was used to 
+        capture, generate, and process the image.
+      target_required: false
+      source_attribute: Software and Version
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: May include both manfactuter and model
+      map: |
+        list(source_col)
+    - target_attribute: imaging_protocol
+      target_description: >
+        A rule which guides how an activity should be performed. Protocols.io 
+        ID or DOI link to a free/open protocol resource describing in detail
+        the assay protocol (e.g. surface markers used in Smart-seq, 
+        dissociation duration, lot/batch numbers for key reagents such as 
+        primers, sequencing reagent kits, etc.) or the protocol by which the
+        image was obtained or generated.
+      target_required: false
+      source_attribute: Protocol Link
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: organ_or_tissue
+      target_description: >
+        The text term used to describe the anatomic site of origin, of the
+        patient's malignant disease, as described by the World Health
+        Organization's (WHO) International Classification of Diseases for
+        Oncology (ICD-O). ICD-O Origin of Disease Anatomic Site CDE 6161035
+      target_required: true
+      source_attribute: Tissue or Organ of Origin
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+      dict: {
+        'Abdomen NOS': 'Abdomen',
+        'Adrenal gland NOS': 'Adrenal Gland',
+        'Anus NOS': 'Anus',
+        'Anterior 2/3 of tongue NOS': 'Anterior 2/3 of tongue',
+        'Ascending colon': 'Ascending Colon',
+        'Base of tongue NOS': 'Base of the Tongue',
+        'Body of pancreas': 'Body of the Pancreas',
+        'Brain NOS': 'Brain',
+        'Breast NOS': 'Breast',
+        'Cheek mucosa': 'Buccal Mucosa',
+        'Colon NOS': 'Colon',
+        'Connective subcutaneous and other soft tissues NOS': 'Connective Tissue',
+        'Descending colon': 'Descending Colon',
+        'Floor of mouth NOS': 'Floor of mouth',
+        'Head of pancreas': 'Head of the Pancreas',
+        'Kidney NOS': 'Kidney',
+        'Larynx NOS': 'Larynx',
+        'Lower limb NOS': 'Lower Extremity',
+        'Lower lobe lung': 'Lower Lobe of the Lung',
+        'Lower-outer quadrant of breast': 'Lower-Outer Quadrant of the Breast',
+        'Lung NOS': 'Lung',
+        'Lymph node NOS': 'Lymph Node',
+        'Lymph nodes of axilla or arm': 'Lymph Node',
+        'Lymph nodes of inguinal region or leg': 'Lymph Node of Inguinal Region or Leg',
+        'Major salivary gland NOS': 'Salivary Gland',
+        'Overlapping lesion of breast': 'Breast',
+        'Pancreas NOS': 'Pancreas',
+        'Rectosigmoid junction': 'Rectosigmoid Region',
+        'Rectum NOS': 'Rectum',
+        'Retromolar area': 'Retromolar Trigone',
+        'Skin of lower limb and hip': 'Skin of the Lower Limb and Hip',
+        'Skin of scalp and neck': 'Skin of the Scalp and Neck',
+        'Skin of trunk': 'Skin of the Trunk',
+        'Skin of upper limb and shoulder': 'Skin of the Upper Limb and Shoulder',
+        'Transverse colon': 'Transverse Colon',
+        'unknown': 'Unknown',
+        'Unknown Primary Site': '',
+        'Upper-inner quadrant of breast': 'Upper-Inner Quadrant of the Breast',
+        'Upper limb NOS': 'Upper Extremity',
+        'Upper lobe lung': 'Upper Lobe of the Lung',
+        'Upper-outer quadrant of breast': 'Upper-Outer Quadrant of the Breast',
+        'Vulva NOS': 'Vulva'
+      }
+      map: |
+        [dict.get(x, x) for x in list(source_col)]
+    - target_attribute: longitudinal_temporal_event_type
+      target_description: >
+        The type of event to which Longitudinal Temporal Offset from Event is
+        relative.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Unclear how to include multiple offset types
+    - target_attribute: longitudinal_temporal_event_offset
+      target_description: >
+        An offset in days from a particular event of significance. May be
+        fractional. In the context of a clinical trial, this is often the days
+        since enrollment, or the baseline imaging Study.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Unclear how to include multiple offset types
+    - target_attribute: HTAN_Data_File_ID
+      target_description: Self-identifier for this data file - HTAN ID of this file HTAN ID SOP (eg HTANx_yyy_zzz)
+      target_required: false
+      source_attribute: HTAN Data File ID
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+CDS Imaging Non-DICOM Pathology:
+  source_name: HTAN Data Model
+  target_version: v1.3.2
+  source_version: v26.6.1
+  attributes:
+    - target_attribute: sample_id
+      target_description: A unique sequence of alphanumeric characters used to identify
+        the specimen at it's point of origin.
+      target_required: true
+      source_attribute: HTAN Biospecimen ID
+      source_description: HTAN ID associated with a biosample based on HTAN ID SOP (eg HTANx_yyy_zzz)
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: sample_description
+      target_description: Text description of a sample or specimen.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: biosample_accession
+      target_description: The alphanumeric identifier assigned to the specimen to uniquely
+        identify it.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: sample_type
+      target_description: The kind of material that forms the sample.
+      target_required: true
+      source_attribute: Biospecimen Type
+      source_description: Biospecimen Type
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        [str(x).replace(' Biospecimen Type','')
+        if x is not None else x
+        for x in list(source_col)]
+    - target_attribute: sample_type_category
+      target_description: The biospecimen grouping that describes the kind of material
+        that forms the sample.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: sample_tumor_status
+      target_description: Text term that represents a description of the kind of tissue
+        collected with respect to disease status or proximity to tumor tissue.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: 
+        -Tumor
+        -Normal
+        -Abnormal
+        -Peritumoral
+        -Unknown
+      note: null
+      fixed_value: Unknown
+    - target_attribute: sample_anatomic_site
+      target_description: Text term that represents the name of the primary disease
+        site of the submitted tumor sample.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values:
+        -Abdomen  
+        -Abdominal Wall  
+        -Acetabulum  
+        -Adenoid  
+        -Adipose  
+        -Adrenal  
+        -Alveolar Ridge  
+        -Amniotic Fluid  
+        -Ampulla Of Vater  
+        -Anal Sphincter  
+        -Ankle  
+        -Anorectum  
+        -Antecubital Fossa  
+        -Antrum  
+        -Anus  
+        -Aorta  
+        -Aortic Body  
+        -Appendix  
+        -Aqueous Fluid  
+        -Arm  
+        -Artery  
+        -Ascending Colon  
+        -Ascending Colon Hepatic Flexure  
+        -Auditory Canal  
+        -Autonomic Nervous System  
+        -Axilla  
+        -Back  
+        -Bile Duct  
+        -Bladder  
+        -Blood  
+        -Blood Vessel  
+        -Bone  
+        -Bone Marrow  
+        -Bowel  
+        -Brain  
+        -Brain Stem  
+        -Breast  
+        -Broad Ligament  
+        -Bronchiole  
+        -Bronchus  
+        -Brow  
+        -Buccal Cavity  
+        -Buccal Mucosa  
+        -Buttock  
+        -Calf  
+        -Capillary  
+        -Cardia  
+        -Carina  
+        -Carotid Artery  
+        -Carotid Body  
+        -Cartilage  
+        -Cecum  
+        -Cell-Line  
+        -Central Nervous System  
+        -Cerebellum  
+        -Cerebral Cortex  
+        -Cerebrospinal Fluid  
+        -Cerebrum  
+        -Cervical Spine  
+        -Cervix  
+        -Chest  
+        -Chest Wall  
+        -Chin  
+        -Clavicle  
+        -Clitoris  
+        -Colon  
+        -Colon - Mucosa Only  
+        -Common Duct  
+        -Conjunctiva  
+        -Connective Tissue  
+        -Dermal  
+        -Descending Colon  
+        -Diaphragm  
+        -Duodenum  
+        -Ear  
+        -Ear Canal  
+        -Ear, Pinna (External)  
+        -Effusion  
+        -Elbow  
+        -Endocrine Gland  
+        -Epididymis  
+        -Epidural Space  
+        -Esophageal; Distal  
+        -Esophageal; Mid  
+        -Esophageal; Proximal  
+        -Esophagogastric Junction  
+        -Esophagus  
+        -Esophagus - Mucosa Only  
+        -Eye  
+        -Fallopian Tube  
+        -Femoral Artery  
+        -Femoral Vein  
+        -Femur  
+        -Fibroblasts  
+        -Fibula  
+        -Finger  
+        -Floor Of Mouth  
+        -Fluid  
+        -Foot  
+        -Forearm  
+        -Forehead  
+        -Foreskin  
+        -Frontal Cortex  
+        -Frontal Lobe  
+        -Fundus Of Stomach  
+        -Gallbladder  
+        -Ganglia  
+        -Gastroesophageal Junction  
+        -Gastrointestinal Tract  
+        -Glottis  
+        -Groin  
+        -Gum  
+        -Hand  
+        -Hard Palate  
+        -Head - Face Or Neck, Nos  
+        -Head & Neck  
+        -Heart  
+        -Hepatic  
+        -Hepatic Duct  
+        -Hepatic Flexure  
+        -Hepatic Vein  
+        -Hip  
+        -Hippocampus  
+        -Humerus  
+        -Hypopharynx  
+        -Ileum  
+        -Ilium  
+        -Index Finger  
+        -Ischium  
+        -Islet Cells  
+        -Jaw  
+        -Jejunum  
+        -Joint  
+        -Kidney  
+        -Knee  
+        -Lacrimal Gland  
+        -Large Bowel  
+        -Laryngopharynx  
+        -Larynx  
+        -Leg  
+        -Leptomeninges  
+        -Ligament  
+        -Lip  
+        -Liver  
+        -Lumbar Spine  
+        -Lung  
+        -Lymph Node  
+        -Lymph Node(s) Axilla  
+        -Lymph Node(s) Cervical  
+        -Lymph Node(s) Distant  
+        -Lymph Node(s) Epitrochlear  
+        -Lymph Node(s) Femoral  
+        -Lymph Node(s) Hilar  
+        -Lymph Node(s) Iliac-Common  
+        -Lymph Node(s) Iliac-External  
+        -Lymph Node(s) Inguinal  
+        -Lymph Node(s) Internal Mammary  
+        -Lymph Node(s) Mammary  
+        -Lymph Node(s) Mesenteric  
+        -Lymph Node(s) Occipital  
+        -Lymph Node(s) Paraaortic  
+        -Lymph Node(s) Parotid  
+        -Lymph Node(s) Pelvic  
+        -Lymph Node(s) Popliteal  
+        -Lymph Node(s) Regional  
+        -Lymph Node(s) Retroperitoneal  
+        -Lymph Node(s) Scalene  
+        -Lymph Node(s) Splenic  
+        -Lymph Node(s) Subclavicular  
+        -Lymph Node(s) Submandibular  
+        -Lymph Node(s) Supraclavicular  
+        -Lymph Nodes(s) Mediastinal  
+        -Mandible  
+        -Maxilla  
+        -Mediastinal Soft Tissue  
+        -Mediastinum  
+        -Mesentery  
+        -Mesothelium  
+        -Middle Finger  
+        -Mitochondria  
+        -Muscle  
+        -Nails  
+        -Nasal Cavity  
+        -Nasal Soft Tissue  
+        -Nasopharynx  
+        -Neck  
+        -Nerve  
+        -Nerve(s) Cranial  
+        -Not Allowed To Collect  
+        -Occipital Cortex  
+        -Ocular Orbits  
+        -Omentum  
+        -Oral Cavity  
+        -Oral Cavity - Mucosa Only  
+        -Oropharynx  
+        -Other  
+        -Ovary  
+        -Palate  
+        -Pancreas  
+        -Paranasal Sinuses  
+        -Paraspinal Ganglion  
+        -Parathyroid  
+        -Parotid Gland  
+        -Patella  
+        -Pelvis  
+        -Penis  
+        -Pericardium  
+        -Periorbital Soft Tissue  
+        -Peritoneal Cavity  
+        -Peritoneum  
+        -Pharynx  
+        -Pineal  
+        -Pineal Gland  
+        -Pituitary Gland  
+        -Placenta  
+        -Pleura  
+        -Popliteal Fossa  
+        -Prostate  
+        -Pylorus  
+        -Rectosigmoid Junction  
+        -Rectum  
+        -Retina  
+        -Retro-Orbital Region  
+        -Retroperitoneum  
+        -Rib  
+        -Ring Finger  
+        -Round Ligament  
+        -Sacrum  
+        -Salivary Gland  
+        -Scalp  
+        -Scapula  
+        -Sciatic Nerve  
+        -Scrotum  
+        -Seminal Vesicle  
+        -Shoulder  
+        -Sigmoid Colon  
+        -Sinus  
+        -Sinus(es), Maxillary  
+        -Skeletal Muscle  
+        -Skin  
+        -Skull  
+        -Small Bowel  
+        -Small Bowel - Mucosa Only  
+        -Small Finger  
+        -Soft Tissue  
+        -Spinal Column  
+        -Spinal Cord  
+        -Spleen  
+        -Splenic Flexure  
+        -Sternum  
+        -Stomach  
+        -Stomach - Mucosa Only  
+        -Subcutaneous Tissue  
+        -Subglottis  
+        -Sublingual Gland  
+        -Submandibular Gland  
+        -Supraglottis  
+        -Synovium  
+        -Temporal Cortex  
+        -Tendon  
+        -Testis  
+        -Thigh  
+        -Thoracic Spine  
+        -Thorax  
+        -Throat  
+        -Thumb  
+        -Thymus  
+        -Thyroid  
+        -Tibia  
+        -Tongue  
+        -Tonsil  
+        -Tonsil (Pharyngeal)  
+        -Trachea / Major Bronchi  
+        -Transverse Colon  
+        -Trunk  
+        -Umbilical Cord  
+        -Ureter  
+        -Urethra  
+        -Urinary Tract  
+        -Uterus  
+        -Uvula  
+        -Vagina  
+        -Vas Deferens  
+        -Vein  
+        -Venous  
+        -Vertebra  
+        -Vulva  
+        -White Blood Cells  
+        -Wrist  
+        -Unknown  
+        -Not Reported  
+      note: null
+      fixed_value: Unknown
+    - target_attribute: sample_age_at_collection
+      target_description: The number of days from the date a sample was collected to
+        the date of the initial pathologic diagnosis.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: derived_from_specimen
+      target_description: One or more characters used to identify the parent substance,
+        or portion of material obtained for use in testing, examination, or study.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: acquisition_method_type
+      target_description: Records the method of acquisition or source for the specimen under consideration
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: tumor_tissue_type
+      target_required: true
+      target_description: >
+        Text that describes the kind of disease present in the tumor specimen 
+        as related to a specific timepoint (add rows to select multiple values
+        along with timepoints)
+      source_attribute: Tumor Tissue Type
+      source_required: null
+      valid_values:
+        -Additional Primary
+        -Atypia or hyperplasia
+        -Local recurrence
+        -Metastatic
+        -Normal
+        -Normal adjacent
+        -Normal distant
+        -NOS
+        -Not applicable
+        -Not reported
+        -Premalignant
+        -Premalignant - in situ
+        -Primary
+        -Recurrent
+        -Tissue
+        -Tumor post-adjuvant therapy
+        -Tumor post-neoadjuvant therapy
+        -Tumor post-therapy
+        -Tumor specimen from de novo untreated malignancy of the bladder
+        -Unknown
+        -Xenograft
+      note: null
+      map: |
+      ['Atypia or hyperplasia' if x == 'Atypia - hyperplasia' else 
+      'Not reported' if x in ["Not analyzed", "Not Otherwise Specified"] else
+      'Tumor post-adjuvant therapy' if x == 'Post therapy adjuvant' else
+      'Tumor post-neoadjuvant therapy' if x == 'Post therapy neoadjuvant' else
+      'Tumor post-therapy' if x == 'Post therapy' else
+      x for x in list(source_col)]
+    - target_attribute: tissue_fixative
+      target_required: true
+      target_description: >
+        A compound that preserves tissues and cells for microscopic study.
+      source_attribute: Fixative Type
+      source_required: true
+      valid_values:
+        -Acetone
+        -Alcohol
+        -Formalin
+        -Glutaraldehyde
+        -OCT media
+        -RNAlater
+        -Saline
+        -95% Ethanol
+        -Dimidoester
+        -Carbodiimide
+        -Dimethylacetamide
+        -Para-benzoquinone
+        -PAXgene tissue
+        -TCL lysis buffer
+        -NP40 lysis buffer
+        -Methacarn
+        -Cryo-store
+        -Carnoy's Fixative
+        -Polaxamer
+        -Other
+        -None
+        -unknown
+      note: null
+      map: |
+        ['unknown' if x is None else x.capitalize() for x in list(source_col)]
+    - target_attribute: embedding_medium
+      target_required: true
+      target_description: >
+        A material that infiltrates and supports a specimen and preserves its
+        shape and structure for sectioning and microscopy.
+      source_attribute: null
+      source_required: null
+      valid_values:
+        -Paraffin wax
+        -Carbowax
+        -Methacrylate
+        -Epoxy Resin (Araldite)
+        -Agar embedding
+        -Celloidin media
+        -Gelatin
+        -Other
+        -None
+        -Unknown
+      fixed_value: Unknown
+      note: null
+    - target_attribute: staining_method
+      target_required: true
+      target_description: >
+        Any of the various methods that use a dye, reagent, or other material
+        for producing coloration in tissues or microorganisms for microscopic 
+        examination.
+      source_attribute: null
+      source_required: true
+      valid_values: null
+      fixed_value: Hematoxylin and Eosin Staining Method
+      note: null
+    - target_attribute: objective
+      target_required: false
+      target_description: Objective
+      source_attribute: Objective
+      source_required: false
+      note: null
+      map: |
+        [None if x == '40X' else x for x in list(source_col)]
+    - target_attribute: nominal_magnification
+      target_required: false
+      target_description: The magnification of the lens as specified by the
+        manufacturer - i.e. "60" is a 60X lens. floating point value > 1(no
+        units)
+      source_attribute: NominalMagnification
+      source_required: true
+      note: null
+      map: |
+        [n.replace('x','') for n in list(source_col)]
+    - target_attribute: immersion
+      target_required: false
+      target_description: Immersion medium
+      source_attribute: Immersion
+      source_required: false
+      note: Source has valid values Air, Oil, Water, Other but Target does not
+      map: |
+        list(source_col)
+    - target_attribute: lensNA
+      target_required: false
+      target_description: The numerical aperture of the lens. Floating point value > 0.
+      source_attribute: LensNA
+      source_required: false
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: working_distance
+      target_required: false
+      target_description: null
+      source_attribute: WorkingDistance
+      source_required: false
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: file_url_in_cds
+      target_description: The specification of a node (file or directory) in a hierarchical
+        file system where an electronic file is located.
+      target_required: true
+      source_attribute: file_url_in_cds
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Manual addition to source metadata table. Derived from 
+        Filename HTAN attribute
+      map: |
+        list(source_col)
+CDS Imaging Multiplex Microscopy:
+  source_name: HTAN Data Model
+  target_version: v1.3.2
+  source_version: v26.6.1
+  attributes:
+    - target_attribute: sample_id
+      target_description: A unique sequence of alphanumeric characters used to identify
+        the specimen at it's point of origin.
+      target_required: true
+      source_attribute: HTAN Biospecimen ID
+      source_description: HTAN ID associated with a biosample based on HTAN ID SOP (eg HTANx_yyy_zzz)
+      source_required: true
+      valid_values: null
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: sample_description
+      target_description: Text description of a sample or specimen.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: biosample_accession
+      target_description: The alphanumeric identifier assigned to the specimen to uniquely
+        identify it.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      note: null
+    - target_attribute: sample_type
+      target_description: The kind of material that forms the sample.
+      target_required: true
+      source_attribute: Biospecimen Type
+      source_description: Biospecimen Type
+      source_required: true
+      valid_values:
+        -Additional - New Primary
+        -Additional Metastatic
+        -Analyte
+        -Ascites
+        -Benign Neoplasms
+        -Blood Buffy Coat
+        -Blood Clot
+        -Blood Derived Cancer - Bone Marrow
+        -Blood Derived Cancer - Bone Marrow, Post-treatment
+        -Blood Derived Cancer - Peripheral Blood
+        -Blood Derived Cancer - Peripheral Blood, Post-treatment
+        -Blood Derived Liquid Biopsy
+        -Blood Derived Normal
+        -Body Fluid
+        -Bone Marrow
+        -Bone Marrow Normal
+        -Buccal Cell Normal
+        -Cells
+        -Cell Line Derived Xenograft Tissue
+        -Cell Lines
+        -Control Analyte
+        -DNA
+        -EBV Immortalized Normal
+        -Expanded Next Generation Cancer Model
+        -FFPE Recurrent
+        -FFPE Scrolls
+        -Fibroblasts from Bone Marrow Normal
+        -Fluids
+        -GenomePlex (Rubicon) Amplified DNA
+        -Granulocytes
+        -Human Tumor Original Cells
+        -In Situ Neoplasms
+        -Lymphoid Normal
+        -Metastatic
+        -Mixed Adherent Suspension
+        -Mononuclear Cells from Bone Marrow Normal
+        -Mouth Rinse
+        -Neoplasms of Uncertain and Unknown Behavior
+        -Next Generation Cancer Model
+        -Next Generation Cancer Model Expanded Under Non-conforming Conditions
+        -Not Allowed To Collect
+        -Pleural Effusion
+        -Post neo-adjuvant therapy
+        -Primary Blood Derived Cancer - Bone Marrow
+        -Primary Blood Derived Cancer - Peripheral Blood
+        -Primary Tumor
+        -Primary Xenograft Tissue
+        -Recurrent Blood Derived Cancer - Bone Marrow
+        -Recurrent Blood Derived Cancer - Peripheral Blood
+        -Recurrent Tumor
+        -Repli-G (Qiagen) DNA
+        -Repli-G X (Qiagen) DNA
+        -RNA
+        -Saliva
+        -Slides
+        -Solid Tissue Normal
+        -Sputum
+        -Tissue
+        -Total RNA
+        -Tumor
+        -Tumor Adjacent Normal - Post Neo-adjuvant Therapy
+        -Whole Blood
+        -Xenograft Tissue
+        -Unknown
+        -Urine
+        -Not Reported
+      note: null
+      map: |
+          [
+            'Fluids' if x == 'Fluids Biospecimen Type' else
+            'Mouth Rinse' if x == 'Mouth Rinse Biospecimen Type' else
+            'Ascites' if x == 'Ascites Biospecimen Type' else
+            'Urine' if x == 'Urine Biospecimen Type' else
+            'Sputum' if x == 'Sputum Biospecimen Type' else
+            'Cells' if x == 'Cells Biospecimen Type' else
+            'Tissue' if x == 'Tissue Biospecimen Type' else
+            'Analyte' if x == 'Analyte Biospecimen Type' else
+            'Bone Marrow' if x == 'Bone Marrow Biospecimen Type' else
+            x.replace(' Biospecimen Type','') if isinstance(x, str) else x
+            for x in list(source_col)
+          ]
+    - target_attribute: sample_type_category
+      target_description: The biospecimen grouping that describes the kind of material
+        that forms the sample.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: sample_tumor_status
+      target_description: Text term that represents a description of the kind of tissue
+        collected with respect to disease status or proximity to tumor tissue.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values:
+        -Tumor
+        -Normal
+        -Abnormal
+        -Peritumoral
+        -Unknown
+      note: null
+      fixed_value: Unknown
+    - target_attribute: sample_anatomic_site
+      target_description: Text term that represents the name of the primary disease
+        site of the submitted tumor sample.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values:
+        -Abdomen
+        -Abdominal Wall
+        -Acetabulum
+        -Adenoid
+        -Adipose
+        -Adrenal
+        -Alveolar Ridge
+        -Amniotic Fluid
+        -Ampulla Of Vater
+        -Anal Sphincter
+        -Ankle
+        -Anorectum
+        -Antecubital Fossa
+        -Antrum
+        -Anus
+        -Aorta
+        -Aortic Body
+        -Appendix
+        -Aqueous Fluid
+        -Arm
+        -Artery
+        -Ascending Colon
+        -Ascending Colon Hepatic Flexure
+        -Auditory Canal
+        -Autonomic Nervous System
+        -Axilla
+        -Back
+        -Bile Duct
+        -Bladder
+        -Blood
+        -Blood Vessel
+        -Bone
+        -Bone Marrow
+        -Bowel
+        -Brain
+        -Brain Stem
+        -Breast
+        -Broad Ligament
+        -Bronchiole
+        -Bronchus
+        -Brow
+        -Buccal Cavity
+        -Buccal Mucosa
+        -Buttock
+        -Calf
+        -Capillary
+        -Cardia
+        -Carina
+        -Carotid Artery
+        -Carotid Body
+        -Cartilage
+        -Cecum
+        -Cell-Line
+        -Central Nervous System
+        -Cerebellum
+        -Cerebral Cortex
+        -Cerebrospinal Fluid
+        -Cerebrum
+        -Cervical Spine
+        -Cervix
+        -Chest
+        -Chest Wall
+        -Chin
+        -Clavicle
+        -Clitoris
+        -Colon
+        -Colon - Mucosa Only
+        -Common Duct
+        -Conjunctiva
+        -Connective Tissue
+        -Dermal
+        -Descending Colon
+        -Diaphragm
+        -Duodenum
+        -Ear
+        -Ear Canal
+        -Ear, Pinna (External)
+        -Effusion
+        -Elbow
+        -Endocrine Gland
+        -Epididymis
+        -Epidural Space
+        -Esophageal; Distal
+        -Esophageal; Mid
+        -Esophageal; Proximal
+        -Esophagogastric Junction
+        -Esophagus
+        -Esophagus - Mucosa Only
+        -Eye
+        -Fallopian Tube
+        -Femoral Artery
+        -Femoral Vein
+        -Femur
+        -Fibroblasts
+        -Fibula
+        -Finger
+        -Floor Of Mouth
+        -Fluid
+        -Foot
+        -Forearm
+        -Forehead
+        -Foreskin
+        -Frontal Cortex
+        -Frontal Lobe
+        -Fundus Of Stomach
+        -Gallbladder
+        -Ganglia
+        -Gastroesophageal Junction
+        -Gastrointestinal Tract
+        -Glottis
+        -Groin
+        -Gum
+        -Hand
+        -Hard Palate
+        -Head - Face Or Neck, Nos
+        -Head & Neck
+        -Heart
+        -Hepatic
+        -Hepatic Duct
+        -Hepatic Flexure
+        -Hepatic Vein
+        -Hip
+        -Hippocampus
+        -Humerus
+        -Hypopharynx
+        -Ileum
+        -Ilium
+        -Index Finger
+        -Ischium
+        -Islet Cells
+        -Jaw
+        -Jejunum
+        -Joint
+        -Kidney
+        -Knee
+        -Lacrimal Gland
+        -Large Bowel
+        -Laryngopharynx
+        -Larynx
+        -Leg
+        -Leptomeninges
+        -Ligament
+        -Lip
+        -Liver
+        -Lumbar Spine
+        -Lung
+        -Lymph Node
+        -Lymph Node(s) Axilla
+        -Lymph Node(s) Cervical
+        -Lymph Node(s) Distant
+        -Lymph Node(s) Epitrochlear
+        -Lymph Node(s) Femoral
+        -Lymph Node(s) Hilar
+        -Lymph Node(s) Iliac-Common
+        -Lymph Node(s) Iliac-External
+        -Lymph Node(s) Inguinal
+        -Lymph Node(s) Internal Mammary
+        -Lymph Node(s) Mammary
+        -Lymph Node(s) Mesenteric
+        -Lymph Node(s) Occipital
+        -Lymph Node(s) Paraaortic
+        -Lymph Node(s) Parotid
+        -Lymph Node(s) Pelvic
+        -Lymph Node(s) Popliteal
+        -Lymph Node(s) Regional
+        -Lymph Node(s) Retroperitoneal
+        -Lymph Node(s) Scalene
+        -Lymph Node(s) Splenic
+        -Lymph Node(s) Subclavicular
+        -Lymph Node(s) Submandibular
+        -Lymph Node(s) Supraclavicular
+        -Lymph Nodes(s) Mediastinal
+        -Mandible
+        -Maxilla
+        -Mediastinal Soft Tissue
+        -Mediastinum
+        -Mesentery
+        -Mesothelium
+        -Middle Finger
+        -Mitochondria
+        -Muscle
+        -Nails
+        -Nasal Cavity
+        -Nasal Soft Tissue
+        -Nasopharynx
+        -Neck
+        -Nerve
+        -Nerve(s) Cranial
+        -Not Allowed To Collect
+        -Occipital Cortex
+        -Ocular Orbits
+        -Omentum
+        -Oral Cavity
+        -Oral Cavity - Mucosa Only
+        -Oropharynx
+        -Other
+        -Ovary
+        -Palate
+        -Pancreas
+        -Paranasal Sinuses
+        -Paraspinal Ganglion
+        -Parathyroid
+        -Parotid Gland
+        -Patella
+        -Pelvis
+        -Penis
+        -Pericardium
+        -Periorbital Soft Tissue
+        -Peritoneal Cavity
+        -Peritoneum
+        -Pharynx
+        -Pineal
+        -Pineal Gland
+        -Pituitary Gland
+        -Placenta
+        -Pleura
+        -Popliteal Fossa
+        -Prostate
+        -Pylorus
+        -Rectosigmoid Junction
+        -Rectum
+        -Retina
+        -Retro-Orbital Region
+        -Retroperitoneum
+        -Rib
+        -Ring Finger
+        -Round Ligament
+        -Sacrum
+        -Salivary Gland
+        -Scalp
+        -Scapula
+        -Sciatic Nerve
+        -Scrotum
+        -Seminal Vesicle
+        -Shoulder
+        -Sigmoid Colon
+        -Sinus
+        -Sinus(es), Maxillary
+        -Skeletal Muscle
+        -Skin
+        -Skull
+        -Small Bowel
+        -Small Bowel - Mucosa Only
+        -Small Finger
+        -Soft Tissue
+        -Spinal Column
+        -Spinal Cord
+        -Spleen
+        -Splenic Flexure
+        -Sternum
+        -Stomach
+        -Stomach - Mucosa Only
+        -Subcutaneous Tissue
+        -Subglottis
+        -Sublingual Gland
+        -Submandibular Gland
+        -Supraglottis
+        -Synovium
+        -Temporal Cortex
+        -Tendon
+        -Testis
+        -Thigh
+        -Thoracic Spine
+        -Thorax
+        -Throat
+        -Thumb
+        -Thymus
+        -Thyroid
+        -Tibia
+        -Tongue
+        -Tonsil
+        -Tonsil (Pharyngeal)
+        -Trachea / Major Bronchi
+        -Transverse Colon
+        -Trunk
+        -Umbilical Cord
+        -Ureter
+        -Urethra
+        -Urinary Tract
+        -Uterus
+        -Uvula
+        -Vagina
+        -Vas Deferens
+        -Vein
+        -Venous
+        -Vertebra
+        -Vulva
+        -White Blood Cells
+        -Wrist
+        -Unknown
+        -Not Reported
+      note: null
+      fixed_value: Unknown
+    - target_attribute: sample_age_at_collection
+      target_description: The number of days from the date a sample was collected to
+        the date of the initial pathologic diagnosis.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: derived_from_specimen
+      target_description: One or more characters used to identify the parent substance,
+        or portion of material obtained for use in testing, examination, or study.
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: acquisition_method_type
+      target_description: Records the method of acquisition or source for the specimen under consideration
+      target_required: false
+      source_attribute: null
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: null
+    - target_attribute: tumor_tissue_type
+      target_required: true
+      target_description: >
+        Text that describes the kind of disease present in the tumor specimen 
+        as related to a specific timepoint (add rows to select multiple values
+        along with timepoints)
+      source_attribute: Tumor Tissue Type
+      source_required: null
+      valid_values: 
+        -Additional Primary
+        -Atypia or hyperplasia
+        -Local recurrence
+        -Metastatic
+        -Normal
+        -Normal adjacent
+        -Normal distant
+        -NOS
+        -Not applicable
+        -Not reported
+        -Premalignant
+        -Premalignant - in situ
+        -Primary
+        -Recurrent
+        -Tissue
+        -Tumor post-adjuvant therapy
+        -Tumor post-neoadjuvant therapy
+        -Tumor post-therapy
+        -Tumor specimen from de novo untreated malignancy of the bladder
+        -Unknown
+        -Xenograft
+      note: null
+      map: |
+         ['Atypia or hyperplasia' if x == 'Atypia - hyperplasia' else 
+         'Not reported' if x in ["Not analyzed", "Not Otherwise Specified"] else
+         'Tumor post-adjuvant therapy' if x == 'Post therapy adjuvant' else
+         'Tumor post-neoadjuvant therapy' if x == 'Post therapy neoadjuvant' else
+         'Tumor post-therapy' if x == 'Post therapy' else
+         x for x in list(source_col)]
+    - target_attribute: tissue_fixative
+      target_required: true
+      target_description: >
+        A compound that preserves tissues and cells for microscopic study.
+      source_attribute: Fixative Type
+      source_required: true
+      valid_values:
+        -Acetone
+        -Alcohol
+        -Formalin
+        -Glutaraldehyde
+        -OCT media
+        -RNAlater
+        -Saline
+        -95% Ethanol
+        -Dimidoester
+        -Carbodiimide
+        -Dimethylacetamide
+        -Para-benzoquinone
+        -PAXgene tissue
+        -TCL lysis buffer
+        -NP40 lysis buffer
+        -Methacarn
+        -Cryo-store
+        -Carnoy's Fixative
+        -Polaxamer
+        -Other
+        -None
+        -unknown
+      note: null
+      map: |
+        ['unknown' if x is None else x.capitalize() for x in list(source_col)]
+    - target_attribute: embedding_medium
+      target_required: true
+      target_description: >
+        A material that infiltrates and supports a specimen and preserves its
+        shape and structure for sectioning and microscopy.
+      source_attribute: null
+      source_required: null
+      valid_values:
+        -Paraffin wax
+        -Carbowax
+        -Methacrylate
+        -Epoxy Resin (Araldite)
+        -Agar embedding
+        -Celloidin media
+        -Gelatin
+        -Other
+        -None
+        -Unknown
+      fixed_value: Unknown
+      note: null
+    - target_attribute: imaging_assay_type
+      target_required: true
+      target_description: null
+      source_attribute: Imaging Assay Type
+      source_required: null
+      valid_values:
+        CyCIF: CyCIF
+        t-CyCIF: t-CyCIF
+        IHC: IHC
+        mIHC: mIHC
+        MxIF: MxIF
+        SABER: SABER
+        IMC: IMC
+        CODEX: CODEX
+        GeoMX-DSP: GeoMX-DSP
+        MIBI: MIBI
+        MERFISH: MERFISH
+        Other: Other
+        RareCyte Orion: Other
+        "": Other
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: objective
+      target_required: false
+      target_description: Objective
+      source_attribute: Objective
+      source_required: false
+      note: null
+      map: |
+        [None if x == '40X' else x for x in list(source_col)]
+    - target_attribute: nominal_magnification
+      target_required: false
+      target_description: The magnification of the lens as specified by the
+        manufacturer - i.e. "60" is a 60X lens. floating point value > 1(no
+        units)
+      source_attribute: NominalMagnification
+      source_required: true
+      note: null
+      map: |
+        [n.replace('x','') for n in list(source_col)]
+    - target_attribute: lens_numerical_aperture
+      target_required: false
+      target_description: The numerical aperture of the lens. Floating point value > 0.
+      source_attribute: LensNA
+      source_required: false
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: immersion
+      target_required: false
+      target_description: Immersion medium
+      source_attribute: Immersion
+      source_required: false
+      note: Source has valid values Air, Oil, Water, Other but Target does not
+      map: |
+        list(source_col)
+    - target_attribute: working_distance
+      target_required: false
+      target_description: null
+      source_attribute: WorkingDistance
+      source_required: false
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: pyramid
+      target_required: false
+      target_description: The data file contains an image pyramid
+      source_attribute: Pyramid
+      source_required: false
+      valid_values:
+        Yes: "True"
+        No: "False"
+      note: null
+      map: |
+        ["True" if x == 'Yes' else "False" for x in source_col]
+    - target_attribute: z-stack
+      target_required: false
+      target_description: Does data file contain a Z-stack of images
+      source_attribute: Zstack
+      source_required: true
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: t_series
+      target_required: false
+      target_description: Does data file contain a time-series of images
+      source_attribute: Tseries
+      source_required: true
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: physical_size_x
+      target_required: false
+      target_description: "Physical size (X-dimension) of a pixel. Floating point value
+        > 0. Size needs to be specified in microns (um)"
+      source_attribute: PhysicalSizeX
+      source_required: true
+      note: Must be converted to um from PhysicalSizeXUnit
+      map: |
+        list(source_col)
+    - target_attribute: physical_size_y
+      target_required: false
+      target_description: "Physical size (Y-dimension) of a pixel. Floating point value
+        > 0. Size needs to be specified in microns (um)"
+      source_attribute: PhysicalSizeY
+      source_required: true
+      note: Must be converted to um from PhysicalSizeYUnit
+      map: |
+        list(source_col)
+    - target_attribute: physical_size_z
+      target_required: false
+      target_description: "Physical size (Z-dimension) of a pixel. Floating point value
+        > 0. Size needs to be specified in microns (um)"
+      source_attribute: PhysicalSizeX      
+      source_required: true
+      note: Must be converted to um from PhysicalSizeZUnit
+      map: |
+        list(source_col)
+    - target_attribute: size_c
+      target_required: false
+      target_description: Number of channels. Integer >= 1
+      source_attribute: SizeC
+      source_required: true
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: size_t
+      target_required: false
+      target_description: Number of time points. Integer >= 1
+      source_attribute: SizeT
+      source_required: true
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: size_x
+      target_required: false
+      target_description: "Size of image: X dimension (in pixels). Integer >= 1"
+      source_attribute: SizeX
+      source_required: true
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: size_y
+      target_required: false
+      target_description: "Size of image: Y dimension (in pixels). Integer >= 1"
+      source_attribute: SizeY
+      source_required: true
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: size_z
+      target_required: false
+      target_description: "Size of image: Z dimension (in pixels). Integer >= 1"
+      source_attribute: SizeZ
+      source_required: true
+      note: null
+      map: |
+        list(source_col)
+    - target_attribute: channel_metadata_filename
+      target_required: true
+      target_description: URI/Bucket URL of uploaded companion CSV file containing
+        channel-level metadata details
+      source_attribute: channel_metadata_url
+      source_required: true
+      note: Manual addition to source metadata table. Derived from 
+        Channel Metadata Filename HTAN attribute
+      map: |
+        list(source_col)
+    - target_attribute: file_url_in_cds
+      target_description: The specification of a node (file or directory) in a hierarchical
+        file system where an electronic file is located.
+      target_required: true
+      source_attribute: file_url_in_cds
+      source_description: null
+      source_required: null
+      valid_values: null
+      note: Manual addition to source metadata table. Derived from 
+        Filename HTAN attribute
+      map: |
+        list(source_col)
