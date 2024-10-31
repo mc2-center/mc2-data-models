@@ -1,0 +1,2792 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Versioned history of the MC2 Center data models.">
+      
+      
+      
+      
+        <link rel="prev" href="../publication/">
+      
+      
+        <link rel="next" href="../../contributing/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Tool - MC2 Center Data Models Explorer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#attribute-tool-accessibility" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-header__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MC2 Center Data Models Explorer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tool
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model/dataset/" class="md-tabs__link">
+          
+  
+    
+  
+  Data Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../all_terms/" class="md-tabs__link">
+          
+  
+    
+  
+  Standard Terms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contributing/" class="md-tabs__link">
+        
+  
+    
+  
+  Contributing to the Data Model
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-nav__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    MC2 Center Data Models Explorer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/DataDSP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Sharing Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/education/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Education Resource Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/grant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grant Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/person/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Person Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/publication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publication Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tool Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Standard Terms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Terms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all_terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    All terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Terms by model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Terms by model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharingPlans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Sharing Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../education/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Education Resource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../person/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Person
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tool
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tool
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Accessibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Cost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-documentation-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Documentation Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-download-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Download Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-grant-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Grant Number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-input-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Input Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-input-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Input Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-link-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Link Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Operating System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Operation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-output-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Output Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Output Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-entity-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Entity Role
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-entity-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Entity Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-package-dependencies-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Package Dependencies Present
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to the Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Accessibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Cost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-documentation-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Documentation Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-download-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Download Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-grant-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Grant Number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-input-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Input Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-input-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Input Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-link-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Link Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Operating System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Operation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-output-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Output Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Output Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-entity-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Entity Role
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-entity-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Entity Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-tool-package-dependencies-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Tool Package Dependencies Present
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Tool</h1>
+
+<p>List of standard terms for the <a href="../../model/tool/">Tool Data Model</a>.</p>
+<h2 id="attribute-tool-accessibility">Attribute: <code>Tool Accessibility</code><a class="headerlink" href="#attribute-tool-accessibility" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                    </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Open Access                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Open Access (With Restrictions)</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Restricted Access              </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-cost">Attribute: <code>Tool Cost</code><a class="headerlink" href="#attribute-tool-cost" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                       </th><th>Description                              </th></tr>
+</thead>
+<tbody>
+<tr><td>Commercial                        </td><td>Software which you have to pay to access.</td></tr>
+<tr><td>Free of Charge                    </td><td>nan                                      </td></tr>
+<tr><td>Free of Charge (With Restrictions)</td><td>nan                                      </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-documentation-type">Attribute: <code>Tool Documentation Type</code><a class="headerlink" href="#attribute-tool-documentation-type" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value              </th><th>Description                                                   </th></tr>
+</thead>
+<tbody>
+<tr><td>API Documentation        </td><td>nan                                                           </td></tr>
+<tr><td>Citation Instructions    </td><td>nan                                                           </td></tr>
+<tr><td>Code of Conduct          </td><td>nan                                                           </td></tr>
+<tr><td>Command-Line Options     </td><td>nan                                                           </td></tr>
+<tr><td>Contributions Policy     </td><td>nan                                                           </td></tr>
+<tr><td>FAQ                      </td><td>Frequently Asked Questions (and answers) about the software.  </td></tr>
+<tr><td>General                  </td><td>General documentation.                                        </td></tr>
+<tr><td>Governance               </td><td>Information about the software governance model.              </td></tr>
+<tr><td>Installation Instructions</td><td>nan                                                           </td></tr>
+<tr><td>Other                    </td><td>Some other type of documentation not listed in biotoolsSchema.</td></tr>
+<tr><td>Quick Start Guide        </td><td>nan                                                           </td></tr>
+<tr><td>Release Notes            </td><td>nan                                                           </td></tr>
+<tr><td>Terms of Use             </td><td>nan                                                           </td></tr>
+<tr><td>Training Material        </td><td>nan                                                           </td></tr>
+<tr><td>User Manual              </td><td>nan                                                           </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-download-type">Attribute: <code>Tool Download Type</code><a class="headerlink" href="#attribute-tool-download-type" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value               </th><th>Description                                                                                                             </th></tr>
+</thead>
+<tbody>
+<tr><td>API Specification         </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Binaries                  </td><td>Binaries for the software; compiled code that allow a program to be installed without having to compile the source code.</td></tr>
+<tr><td>Biological Data           </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Command-Line Specification</td><td>nan                                                                                                                     </td></tr>
+<tr><td>Container File            </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Downloads Page            </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Icon                      </td><td>Icon of the software.                                                                                                   </td></tr>
+<tr><td>Other                     </td><td>Other type of download for software - the default if a more specific type is not available.                             </td></tr>
+<tr><td>Screenshot                </td><td>Screenshot of the software.                                                                                             </td></tr>
+<tr><td>Software Package          </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Source Code               </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Test Data                 </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Test Script               </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Tool Wrapper (CWL)        </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Tool Wrapper (Galaxy)     </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Tool Wrapper (Taverna)    </td><td>nan                                                                                                                     </td></tr>
+<tr><td>Tool wrapper (Other)      </td><td>nan                                                                                                                     </td></tr>
+<tr><td>VM Image                  </td><td>nan                                                                                                                     </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-grant-number">Attribute: <code>Tool Grant Number</code><a class="headerlink" href="#attribute-tool-grant-number" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                    </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Affiliated/Non-Grant Associated</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA184897                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA184898                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA188388                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193313                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193417                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193419                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193461                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193489                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA195469                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA199315                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202123                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202144                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202177                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202229                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202241                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209891                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209923                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209971                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209975                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209978                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209988                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209992                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209997                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210152                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210173                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210180                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210181                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210184                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210190                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214282                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214292                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214297                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214300                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214354                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214369                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214381                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214411                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215709                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215794                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215798                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215845                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215848                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217297                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217376                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217377                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217378                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217450                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217456                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217514                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217613                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217617                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217655                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA220378                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA223976                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA224012                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA224013                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA224044                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA225088                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA225566                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA227136                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA227544                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA227550                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA228608                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA228963                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA231978                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232137                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232161                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232209                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232216                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232382                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232517                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA234787                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA235747                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA238475                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA238720                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA238728                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA240301                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA241137                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA241927                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243004                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243007                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243072                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243073                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243075                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244100                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244101                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244107                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244109                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA245313                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA248890                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA249799                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250040                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250044                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250046                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250481                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA251443                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253248                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253472                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253540                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253547                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253553                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA254200                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA254886                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA256054                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA256481                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA260432                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261694                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261701                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261717                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261719                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261822                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261841                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261842                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA263001                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264583                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264610                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264611                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264620                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA267170                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268069                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268072                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268083                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268084                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA271273                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274492                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274494                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274499                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274502                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274509                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA275808                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA279408                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA279560                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA280984                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA280849                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA280829                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA284090                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA284086                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274504                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA283114                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274507                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274506                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274511                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA282451                       </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-input-data">Attribute: <code>Tool Input Data</code><a class="headerlink" href="#attribute-tool-input-data" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                     </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Accession                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Alignment                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biological Model ID             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biological Model Name           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Line Name                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Migration Track Image      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Type Identifier            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Type Name                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Type Ontology ID           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Chromosome Name                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Chromosome Report               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Clustered Expression Profiles   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Codon Number                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Comparison Matrix               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Compound Identifier             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Compound Name                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Concentration                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Count Matrix                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DNA Sequence                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Index                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Reference                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Database Search Results         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Drug Identifier                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Drug Name                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Drug Report                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Electronic Health Record        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Enzyme Kinetics Data            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Experimental Measurement        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Expression Data                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GO-Term Enrichment Data         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Expression Matrix          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Expression Profile         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene ID                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene ID (NCBI)                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Identifier                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Name                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Report                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Symbol                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Tree                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genetic Map                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genotype/Phenotype Report       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Heat Map                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Hidden Markov Model             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Hierarchy                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Histogram                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Identifier                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Image                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Image Metadata                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Kinetic Model                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MRI Image                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Map                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Map Data                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mass Spectrometry Data          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mass Spectrum                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mathematical Model              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Matrix                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecular Property              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecular Simulation Data       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecule Identifier             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecule Name                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Morphology Parameter            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mutation ID                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Not Applicable                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleic Acid Identifier         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleic Acid Report             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleic Acid Sequence           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Concept Data           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Data                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Identifier             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Mapping                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Name                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Term                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Organism Identifier             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Organism Name                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Over-Represesntation Data       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>P-Value                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pair Sequence Alignment         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pathway Or Network              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pathway Or Network Report       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pathway Overrepresentation Data </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Peptide Identification          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Peptide Property                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phenotype Name                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogenetic Data               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogenetic Tree               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Plain Text                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Plot                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Position Weight Matrix          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Position-Specific Scoring Matrix</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Contact Map             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Identifier              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Interaction Data        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Name                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Property                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Report                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Sequence                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Structure Report        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Quality Control Report          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA Sequence                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Raw Image                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Reaction Data                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RefSeq Accession                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Report                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Resource Metadata               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sample Annotation               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sample ID                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Score                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Alignment              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Attribute              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Cluster                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Composition Plot       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Composition Report     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Coordinates            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Features               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Image                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Motif                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Position               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Property               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Range                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Record                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Report                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Search Results         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Set                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Signature Data         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Similarity             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Similarity Score       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Variations             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Simulation                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Small Molecule Report           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spectrum                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Statistical Estimate Score      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Strain Identifier               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Strain Name                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Structure                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Structure Report                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Taxonomy                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Text Data                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Text Mining Report              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Topology Data                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Training Material               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Trajectory Data                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Transcription Factor Identifier </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Transcription Factor Name       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Vmax                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>dbSNP ID                        </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-input-format">Attribute: <code>Tool Input Format</code><a class="headerlink" href="#attribute-tool-input-format" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                             </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Alignment Format                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Alignment Format (Pair Only)            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Alignment Format (Text)                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Annotated Text Format                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Antimony                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BAM                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BCF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BED                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BLAST Results                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BNGL                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Binary Format                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biological Model Format                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biological Pathway Or Network Format    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CSV                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Chemical Data Format                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cytoband Format                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cytoscape Input File Format             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DCC                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DCD                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DSV                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Database Hits (Sequence) Format         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Docker Image Format                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Document Format                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dot-Bracket Format                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FASTA                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FASTQ                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FASTQ-Illumina                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FCS                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GCT/Res Format                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFF3                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GIF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GML                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GTF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Annotation Format                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Cluster Format                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Expression Report Format           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genotype And Phenotype Annotation Format</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Graph Format                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>H5AD                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HDF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HDF5                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HTML                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Hidden Markov Model Format              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Image Format                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Individual Genetic Data Format          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JPG                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JSON                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LSM                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MAF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MAGE-ML                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MAGE-TAB                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MAT                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MATLAB Script                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MSF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Map Format                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mass Spectrometry Data Format           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Matrix Format                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NIFTI Format                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nexus Format                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Not Applicable                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NumPy Format                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OME-TIFF                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Format                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PDF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PNG                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PS                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PSF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylip Format                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylip Format Variant                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogenetic Tree Format                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogenetic Tree Format (Text)         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Interaction Format              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Python Script                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>R File Format                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>R Script                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RDS                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA Annotation Format                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA Secondary Structure Format          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RPKM                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Raw Sequence Format                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SAM                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SBML                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SQLite Format                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SVG                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Scores Format                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Annotation Track Format        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Cluster Format                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Cluster Format (Protein)       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Feature Annotation Format      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Feature Table Format           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Feature Table Format (Text)    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Profile Format                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Range Format                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Record Format                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Trace Format                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Variation Annotation Format    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TIFF                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TSV                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TXT                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Tertiary Structure Format               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Textual Format                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Topology Format                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Trajectory Format                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>VCF                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Workflow Format                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>XML                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>YAML                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>bedgraph                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>bigWig                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>cel                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>imzML Metadata File                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>mzML                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>nii                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>pkl                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>sif                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>xls                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>xlsx                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PDB                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HED                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MRC                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Unspecified                             </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-language">Attribute: <code>Tool Language</code><a class="headerlink" href="#attribute-tool-language" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value      </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>AWK              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ActionScript     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ada              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AppleScript      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Assembly Language</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Bash             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>C                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>C#               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>C++              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>COBOL            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CSS              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CWL              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ColdFusion       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>D                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Delphi           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dockerfile       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dylan            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Eiffel           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Elm              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Forth            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Fortran          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Go               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Groovy           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HTML             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Haskell          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Icarus           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JSP              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Java             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JavaScript       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Julia            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LabVIEW          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lisp             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lua              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MATLAB           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MLXTRAN          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Maple            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mathematica      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NMTRAN           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Netlogo          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nextflow         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ocaml            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OpenEdge ABL     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PHP              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pascal           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Perl             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PostScript       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PowerShell       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Prolog           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PyMOL            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Python           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>R                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>REXX             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Racket           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ruby             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SAS              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SQL              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Scala            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Scheme           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Shell            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TeX              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Turing           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>VHDL             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Verilog          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Visual Basic     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>WDL              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>XAML             </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-license">Attribute: <code>Tool License</code><a class="headerlink" href="#attribute-tool-license" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                         </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>AAL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ADSL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-1.2                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-2.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AGPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AGPL-3.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AMDPLPA                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AML                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AMPAS                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ANTLR-PD                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APAFML                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-1.2                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Abstyles                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Adobe-2006                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Adobe-Glyph                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Afmparse                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Aladdin                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Apache-1.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Apache-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Apache-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-1.0-Perl                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-1.0-cl8                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-2-Clause                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-2-Clause-FreeBSD                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-2-Clause-NetBSD                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-Attribution            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-Clear                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-LBNL                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-No-Nuclear-License     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-No-Nuclear-License-2014</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-No-Nuclear-Warranty    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-4-Clause                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-4-Clause-UC                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-Protection                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-Source-Code                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-style                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Bahyph                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Barr                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Beerware                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BitTorrent-1.0                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BitTorrent-1.1                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Borceux                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CATOSL-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-1.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-2.5                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-3.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-4.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-2.5                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-3.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-4.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-1.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-2.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-2.5                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-3.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-4.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-1.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-2.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-2.5                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-3.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-4.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-2.5                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-3.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-4.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-2.5                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-3.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-4.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC0-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CDDL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CDDL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-1.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-2.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-B                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-C                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CNRI-Jython                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CNRI-Python                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CNRI-Python-GPL-Compatible          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CPAL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CPOL-1.02                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CUA-OPL-1.0                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Caldera                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ClArtistic                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Condor-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Crossword                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CrystalStacker                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cube                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>D-FSL-1.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DOC                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DSDP                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dotseqn                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ECL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ECL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EFL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EFL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EUDatagrid                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EUPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EUPL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Entessa                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ErlPL-1.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Eurosym                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FSFAP                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FSFUL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FSFULLR                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FTL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Fair                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Frameworx-1.0                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FreeImage                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Freeware                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFDL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFDL-1.2                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFDL-1.3                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GL2PS                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GPL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GPL-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Giftware                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Glide                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Glulxe                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HPND                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HaskellReport                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IBM-pibs                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ICU                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IJG                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IPA                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ISC                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ImageMagick                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Imlib2                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Info-ZIP                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Intel                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Intel-ACPI                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Interbase-1.0                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JSON                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JasPer-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LAL-1.2                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LAL-1.3                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPL-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPL-2.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPL-3.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPLLR                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPL-1.02                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.2                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.3a                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.3c                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Latex2e                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Leptonica                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LiLiQ-P-1.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LiLiQ-R-1.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LiLiQ-Rplus-1.1                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Libpng                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-CMU                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-advertising                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-enna                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-feh                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MITNFA                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-2.0-no-copyleft-exception       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MS-PL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MS-RL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MTLL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MakeIndex                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MirOS                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Motosoto                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Multics                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mup                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NASA-1.3                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NBPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NCSA                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NGPL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NLOD-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NLPL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NOSL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NPOSL-3.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NRL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NTP                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Naumen                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NetCDF                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Newsletr                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nokia                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Not licensed                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Noweb                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nunit                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OCCT-PL                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OCLC-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ODbL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OFL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OFL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OGTSL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.2                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.3                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.4                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.0.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.2                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.2.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.2.2                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.3                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.4                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.5                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.6                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.7                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.8                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OML                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSET-PL-2.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-2.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OpenSSL                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PDDL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PHP-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PHP-3.01                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Plexus                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PostgreSQL                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Proprietary                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Python-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>QPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Qhull                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RHeCos-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RPL-1.5                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RPSL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RSA-MD                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RSCPL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Rdisc                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ruby                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SAX-PD                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SCEA                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SGI-B-1.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SGI-B-1.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SGI-B-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SISSL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SISSL-1.2                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SMLNJ                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SMPPL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SNIA                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SWL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Saxpath                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sendmail                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SimPL-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sleepycat                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spencer-86                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spencer-94                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spencer-99                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SugarCRM-1.1.3                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TCL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TMate                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TORQUE-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TOSL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>UPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Unicode-TOU                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Unlicense                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>VOSTROM                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>VSL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Vim                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>W3C                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>W3C-19980720                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>WTFPL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Watcom-1.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Wsuipa                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>X11                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>XFree86-1.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>XSkat                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Xerox                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Xnet                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>YPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>YPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ZPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ZPL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ZPL-2.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zed                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zend-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zimbra-1.3                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zimbra-1.4                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zlib                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>bzip2-1.0.5                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>bzip2-1.0.6                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>curl                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>diffmark                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>dvipdfm                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>eGenix                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>gSOAP-1.3b                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>gnuplot                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>iMatix                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>libtiff                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>mpich2                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>psfrag                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>psutils                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>xinetd                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>xpp                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>zlib-acknowledgement                </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-link-type">Attribute: <code>Tool Link Type</code><a class="headerlink" href="#attribute-tool-link-type" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value         </th><th>Description                                                                                                                                                                                         </th></tr>
+</thead>
+<tbody>
+<tr><td>Discussion Forum    </td><td>nan                                                                                                                                                                                                 </td></tr>
+<tr><td>Galaxy Service      </td><td>nan                                                                                                                                                                                                 </td></tr>
+<tr><td>Helpdesk            </td><td>A phone line, web site or email-based system providing help to the end-user of the software.                                                                                                        </td></tr>
+<tr><td>Issue Tracker       </td><td>nan                                                                                                                                                                                                 </td></tr>
+<tr><td>Mailing list        </td><td>Mailing list for the software announcements, discussions, support etc.                                                                                                                              </td></tr>
+<tr><td>Mirror              </td><td>Mirror of an (identical) online service.                                                                                                                                                            </td></tr>
+<tr><td>Other               </td><td>Other type of link for software - the default if a more specific type is not available.                                                                                                             </td></tr>
+<tr><td>Repository          </td><td>A place where source code, data and other files can be retrieved from, typically via platforms like GitHub which provide version control and other features, or something simpler, e.g. an FTP site.</td></tr>
+<tr><td>Service             </td><td>An online service (other than Galaxy) that provides access (an interface) to the software.                                                                                                          </td></tr>
+<tr><td>Social Media        </td><td>nan                                                                                                                                                                                                 </td></tr>
+<tr><td>Software Catalogue  </td><td>nan                                                                                                                                                                                                 </td></tr>
+<tr><td>Technical Monitoring</td><td>nan                                                                                                                                                                                                 </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-operating-system">Attribute: <code>Tool Operating System</code><a class="headerlink" href="#attribute-tool-operating-system" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value  </th><th>Description                                                            </th></tr>
+</thead>
+<tbody>
+<tr><td>Linux        </td><td>All flavours of Linux/UNIX operating systems.                          </td></tr>
+<tr><td>Mac          </td><td>All flavours of Apple Macintosh operating systems (primarily Mac OS X).</td></tr>
+<tr><td>Windows      </td><td>All flavours of Microsoft Windows operating system.                    </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-operation">Attribute: <code>Tool Operation</code><a class="headerlink" href="#attribute-tool-operation" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                              </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Aggregation                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Allele Frequency Distribution Analysis   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Analysis                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Annotation                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Box-Whisker Plot Plotting                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Calculation                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Migration Analysis                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Modelling                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Number Quantification               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Type Enrichment Analysis            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Classification                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Clustering                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Clustering Profile Plotting              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Comparison                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Conversion                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Copy Number Variation Detection          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Correlation                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DNA Barcoding                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Handling                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Retrieval                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Database Search                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>De Novo Sequencing                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Demultiplexing                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Differential Gene Expression Profiling   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Differential Protein Expression Profiling</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dimensionality Reduction                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Editing                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Enrichment Analysis                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Expression Analysis                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Expression Correlation Analysis          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Expression Data Visualisation            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Expression Profile Clustering            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Expression Profile Comparison            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Functional Clustering                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Expression Profiling                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Methylation Analysis                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Regulatory Network Analysis         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Regulatory Network Prediction       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene-Set Enrichment Analysis             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Generation                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genetic Mapping                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genetic Variation Analysis               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genome Analysis                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genome Annotation                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genome Visualisation                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genotyping                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Heat Map Generation                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Image Analysis                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Imputation                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Incident Curve Plotting                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Information Retrieval                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Linkage Analysis                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mapping                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Metabolic Pathway Prediction             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Methylation Analysis                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Microscope Image Visualisation           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Modelling and Simulation                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecular Dynamics                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Network Analysis                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Network Visualisation                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleic Acid Feature Detection           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleic Acid Sequence Analysis           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleosome Position Prediction           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology Visualisation                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pathway Analysis                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pathway Modelling                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Peak Calling                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogenetic Analysis                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Prediction and Recognition               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Principal Component Analysis             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Comparison                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Function Comparison              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Function Prediction              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Identification                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Interaction Network Analysis     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Quantification                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein-Protein Interaction Analysis     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Quantification                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Query and Retrieval                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA Secondary Structure Prediction       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA-Seq Analysis                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA-Seq Quantification                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Regression Analysis                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SNP Annotation                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SNP Detection                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Scatter Plot Plotting                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Alignment Analysis              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Alignment Comparison            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Analysis                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Annotation                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Classification                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Cluster Visualisation           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Clustering                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Comparison                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Composition Calculation         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Editing                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence File Editing                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Read Processing                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequencing Quality Control               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Simulated Gene Expression Data Generation</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sorting                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spectral Analysis                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Standardisation and Normalisation        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Statistical Calculation                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Statistical Inference                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Statistical Modelling                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Structural Variation Detection           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Structure Analysis                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Text Mining                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Tissue Modelling                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Validation                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Variant Calling                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Variant Classification                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Variant Effect Prediction                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Visualisation                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>scRNA-Seq Analysis                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Agent-Based Cell Modelling               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Not Applicable                           </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-output-data">Attribute: <code>Tool Output Data</code><a class="headerlink" href="#attribute-tool-output-data" title="Permanent link">&para;</a></h2>
+<p>See <a href="#attribute-tool-input-data">Tool Input Data</a></p>
+<h2 id="attribute-tool-output-format">Attribute: <code>Tool Output Format</code><a class="headerlink" href="#attribute-tool-output-format" title="Permanent link">&para;</a></h2>
+<p>See <a href="#attribute-tool-input-format">Tool Input Data</a></p>
+<h2 id="attribute-tool-topic">Attribute: <code>Tool Topic</code><a class="headerlink" href="#attribute-tool-topic" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                                       </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Allergy Clinical Immunology and Immunotherapeutics</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biochemistry                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Bioimaging                                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Bioinformatics                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biological Databases                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biology                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biomedical Science                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biomolecular Simulation                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biophysics                                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biotechnology                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biotherapeutics                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Biology                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cell Culture Collection                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Chemistry                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Chip-Seq                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Chromosome Conformation Capture                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Comparative Genomics                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Compound Libraries and Screening                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Computational Biology                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Computer Science                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cytogenetics                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cytometry                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DNA                                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DNA Mutation                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DNA Packaging                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DNA Polymorphism                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Architecture Analysis and Design             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Identity and Mapping                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Mining                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Submission Annotation and Curation           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Visualisation                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Developmental Biology                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Drug Development                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Drug Discovery                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Drug Metabolism                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Electron Microscopy                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Epigenetics                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Evolutionary Biology                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Exome Sequencing                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Experimental Design and Studies                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Function Analysis                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Functional Genomics                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Functional Regulatory and Non-Coding RNA          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GWAS Study                                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Expression                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Regulation                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Structure                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene Transcripts                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Gene and Protein Families                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genetic Engineering                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genetic Variation                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genetics                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genomics                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genotype and Phenotype                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Imaging                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Immunoinformatics                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Immunology                                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Immunomics                                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Immunoprecipitation Experiment                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Immunoproteins and Antigens                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Infectious Disease                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Informatics                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Laboratory Techniques                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Light Microscopy                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lipids                                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Machine Learning                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mapping                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mathematics                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Medical Imaging                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Medical Informatics                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Medicine                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Medicines Research and Development                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Membrane and Lipoproteins                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Metagenomics                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecular Biology                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecular Genetics                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Molecular Interactions Pathways and Networks      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleic Acid Structure Analysis                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nucleic Acids                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Omics                                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Oncology                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ontology and Terminology                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pathology                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pharmacogenomics                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pharmacology                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pharmacovigilance                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogenetics                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogenomics                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Phylogeny                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Preclinical and Clinical Studies                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Probes and Primers                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Expression                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Modifications                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Protein Properties                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Proteins                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Proteomics                                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Proteomics Experiment                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA                                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RNA-Seq                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Safety Sciences                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sample Collections                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequence Analysis                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sequencing                                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Simulation Experiment                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Software Engineering                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Statistics and Probability                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Structural Analysis                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Structural Biology                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Systems Biology                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Transcription Factors and Regulatory Sites        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Transcriptomics                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Virology                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Whole Genome Sequencing                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Workflows                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>scRNA-Seq                                         </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-type">Attribute: <code>Tool Type</code><a class="headerlink" href="#attribute-tool-type" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value          </th><th>Description                                                                                                                                                                                                                                                                                       </th></tr>
+</thead>
+<tbody>
+<tr><td>Bioinformatics Portal</td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Command-Line Tool    </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Database Portal      </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Desktop Application  </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Library              </td><td>A collection of components that are used to construct other tools. bio.tools scope includes component libraries performing high-level bioinformatics functions but excludes lower-level programming libraries.                                                                                    </td></tr>
+<tr><td>Notebook             </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Ontology             </td><td>A collection of information about concepts, including terms, synonyms, descriptions etc.                                                                                                                                                                                                          </td></tr>
+<tr><td>Other                </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Plug-In              </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>SPARQL Endpoint      </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Script               </td><td>A tool written for some run-time environment (e.g. other applications or an OS shell) that automates the execution of tasks. Often a small program written in a general-purpose languages (e.g. Perl, Python) or some domain-specific languages (e.g. sed).                                       </td></tr>
+<tr><td>Serialized Model     </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Suite                </td><td>A collection of tools which are bundled together into a convenient toolkit. Such tools typically share related functionality, a common user interface and can exchange data conveniently. This includes collections of stand-alone command-line tools, or Web applications within a common portal.</td></tr>
+<tr><td>Web API              </td><td>An application programming interface (API) consisting of endpoints to a request-response message system accessible via HTTP. Includes everything from simple data-access URLs to RESTful APIs.                                                                                                    </td></tr>
+<tr><td>Web Application      </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Web Service          </td><td>nan                                                                                                                                                                                                                                                                                               </td></tr>
+<tr><td>Workbench            </td><td>An application or suite with a graphical user interface, providing an integrated environment for data analysis which includes or may be extended with any number of functions or tools. Includes workflow systems, platforms, frameworks etc.                                                     </td></tr>
+<tr><td>Workflow             </td><td>A set of tools which have been composed together into a pipeline of some sort. Such tools are (typically) standalone, but are composed for convenience, for instance for batch execution via some workflow engine or script.                                                                      </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-entity-role">Attribute: <code>Tool Entity Role</code><a class="headerlink" href="#attribute-tool-entity-role" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value    </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Developer      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Maintainer     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Provider       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Documentor     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Contributor    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Support        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Primary Contact</td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-entity-type">Attribute: <code>Tool Entity Type</code><a class="headerlink" href="#attribute-tool-entity-type" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value        </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Person             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Project            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Division           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Institute          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Research Consortium</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Funding Agency     </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-tool-package-dependencies-present">Attribute: <code>Tool Package Dependencies Present</code><a class="headerlink" href="#attribute-tool-package-dependencies-present" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value  </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>True         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>False        </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

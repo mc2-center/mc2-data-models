@@ -1,0 +1,2344 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Versioned history of the MC2 Center data models.">
+      
+      
+      
+      
+        <link rel="prev" href="../sharingPlans/">
+      
+      
+        <link rel="next" href="../file/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Education Resource - MC2 Center Data Models Explorer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#attribute-resource-access-hazard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-header__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MC2 Center Data Models Explorer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Education Resource
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model/dataset/" class="md-tabs__link">
+          
+  
+    
+  
+  Data Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../all_terms/" class="md-tabs__link">
+          
+  
+    
+  
+  Standard Terms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contributing/" class="md-tabs__link">
+        
+  
+    
+  
+  Contributing to the Data Model
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MC2 Center Data Models Explorer" class="md-nav__button md-logo" aria-label="MC2 Center Data Models Explorer" data-md-component="logo">
+      
+  <img src="../../assets/cckp-logo.png" alt="logo">
+
+    </a>
+    MC2 Center Data Models Explorer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mc2-center/data-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    data-models
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/DataDSP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Sharing Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/education/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Education Resource Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/grant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grant Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/person/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Person Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/publication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publication Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tool Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Standard Terms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Terms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../all_terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    All terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Terms by model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Terms by model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharingPlans/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Sharing Plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Education Resource
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Education Resource
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-access-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Access Hazard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-activity-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Activity Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-educational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Educational Level
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-grant-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Grant Number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-intended-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Intended Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-media-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Media Accessibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-origin-institution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Origin Institution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Primary Audience
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Primary Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-secondary-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Secondary Topic
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../person/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Person
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to the Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-access-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Access Hazard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-activity-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Activity Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-educational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Educational Level
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-grant-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Grant Number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-intended-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Intended Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-media-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Media Accessibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-origin-institution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Origin Institution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Primary Audience
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-primary-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Primary Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-resource-secondary-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute: Resource Secondary Topic
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Education Resource</h1>
+
+<p>List of standard terms for the <a href="../../model/education/">Education Resource Data Model</a>.</p>
+<h2 id="attribute-resource-access-hazard">Attribute: <code>Resource Access Hazard</code><a class="headerlink" href="#attribute-resource-access-hazard" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value  </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Flashing     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Motion       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Simulation   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sound        </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-activity-type">Attribute: <code>Resource Activity Type</code><a class="headerlink" href="#attribute-resource-activity-type" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value               </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Activity/Lab              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Assessment                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Case Study                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Data Set                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Diagram/Illustration      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Full Course               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Game                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Homework/Assignment       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Interactive               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lecture                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lecture Notes             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lesson                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lesson Plan               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Module                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Primary Source            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Reading                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Simulation                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Student Guide             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Syllabus                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Teaching/Learning Strategy</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Textbook                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Unit of Study             </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-educational-level">Attribute: <code>Resource Educational Level</code><a class="headerlink" href="#attribute-resource-educational-level" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                       </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Preschool                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lower Primary                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Upper Primary                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Middle School                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>High School                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Community College / Lower Division</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>College / Upper Division          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Graduate / Profession             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Career / Technical                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Adult Education                   </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-grant-number">Attribute: <code>Resource Grant Number</code><a class="headerlink" href="#attribute-resource-grant-number" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                    </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Affiliated/Non-Grant Associated</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA184897                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA184898                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA188388                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193313                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193417                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193419                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193461                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA193489                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA195469                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA199315                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202123                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202144                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202177                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202229                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA202241                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209891                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209923                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209971                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209975                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209978                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209988                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209992                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA209997                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210152                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210173                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210180                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210181                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210184                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA210190                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214282                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214292                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214297                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214300                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214354                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214369                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214381                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA214411                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215709                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215794                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215798                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215845                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA215848                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217297                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217376                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217377                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217378                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217450                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217456                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217514                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217613                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217617                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA217655                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA220378                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA223976                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA224012                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA224013                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA224044                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA225088                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA225566                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA227136                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA227544                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA227550                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA228608                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA228963                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA231978                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232137                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232161                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232209                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232216                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232382                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA232517                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA234787                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA235747                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA238475                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA238720                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA238728                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA240301                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA241137                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA241927                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243004                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243007                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243072                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243073                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA243075                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244100                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244101                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244107                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA244109                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA245313                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA248890                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA249799                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250040                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250044                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250046                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA250481                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA251443                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253248                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253472                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253540                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253547                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA253553                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA254200                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA254886                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA256054                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA256481                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA260432                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261694                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261701                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261717                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261719                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261822                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261841                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA261842                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA263001                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264583                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264610                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264611                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA264620                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA267170                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268069                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268072                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268083                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA268084                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA271273                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274492                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274494                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274499                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274502                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274509                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA275808                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA279408                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA279560                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA280984                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA280849                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA280829                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA284090                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA284086                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274504                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA283114                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274507                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274506                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA274511                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CA282451                       </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-intended-use">Attribute: <code>Resource Intended Use</code><a class="headerlink" href="#attribute-resource-intended-use" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value             </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Curriculum/Instruction  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Assessment              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Professional Development</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other                   </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-language">Attribute: <code>Resource Language</code><a class="headerlink" href="#attribute-resource-language" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value  </th><th>Description                                                                     </th></tr>
+</thead>
+<tbody>
+<tr><td>aa           </td><td>Afar                                                                            </td></tr>
+<tr><td>ab           </td><td>Abkhazian                                                                       </td></tr>
+<tr><td>ae           </td><td>Avestan                                                                         </td></tr>
+<tr><td>af           </td><td>Afrikaans                                                                       </td></tr>
+<tr><td>ak           </td><td>Akan                                                                            </td></tr>
+<tr><td>am           </td><td>Amharic                                                                         </td></tr>
+<tr><td>an           </td><td>Aragonese                                                                       </td></tr>
+<tr><td>ar           </td><td>Arabic                                                                          </td></tr>
+<tr><td>as           </td><td>Assamese                                                                        </td></tr>
+<tr><td>av           </td><td>Avaric                                                                          </td></tr>
+<tr><td>ay           </td><td>Aymara                                                                          </td></tr>
+<tr><td>az           </td><td>Azerbaijani                                                                     </td></tr>
+<tr><td>ba           </td><td>Bashkir                                                                         </td></tr>
+<tr><td>be           </td><td>Belarusian                                                                      </td></tr>
+<tr><td>bg           </td><td>Bulgarian                                                                       </td></tr>
+<tr><td>bh           </td><td>Bihari languages                                                                </td></tr>
+<tr><td>bi           </td><td>Bislama                                                                         </td></tr>
+<tr><td>bm           </td><td>Bambara                                                                         </td></tr>
+<tr><td>bn           </td><td>Bengali                                                                         </td></tr>
+<tr><td>bo           </td><td>Tibetan                                                                         </td></tr>
+<tr><td>br           </td><td>Breton                                                                          </td></tr>
+<tr><td>bs           </td><td>Bosnian                                                                         </td></tr>
+<tr><td>ca           </td><td>Catalan                                                                         </td></tr>
+<tr><td>ca           </td><td>Valencian                                                                       </td></tr>
+<tr><td>ce           </td><td>Chechen                                                                         </td></tr>
+<tr><td>ch           </td><td>Chamorro                                                                        </td></tr>
+<tr><td>co           </td><td>Corsican                                                                        </td></tr>
+<tr><td>cr           </td><td>Cree                                                                            </td></tr>
+<tr><td>cs           </td><td>Czech                                                                           </td></tr>
+<tr><td>cu           </td><td>Church Slavic, Old Slavonic, Old Church Slavonic, Old Bulgarian, Church Slavonic</td></tr>
+<tr><td>cv           </td><td>Chuvash                                                                         </td></tr>
+<tr><td>cy           </td><td>Welsh                                                                           </td></tr>
+<tr><td>da           </td><td>Danish                                                                          </td></tr>
+<tr><td>de           </td><td>German                                                                          </td></tr>
+<tr><td>dv           </td><td>Dhivehi, Divehi                                                                 </td></tr>
+<tr><td>dv           </td><td>Maldivian                                                                       </td></tr>
+<tr><td>dz           </td><td>Dzongkha                                                                        </td></tr>
+<tr><td>ee           </td><td>Ewe                                                                             </td></tr>
+<tr><td>el           </td><td>Greek, Modern (1453-)                                                           </td></tr>
+<tr><td>en           </td><td>English                                                                         </td></tr>
+<tr><td>eo           </td><td>Esperanto                                                                       </td></tr>
+<tr><td>es           </td><td>Spanish, Castilian                                                              </td></tr>
+<tr><td>et           </td><td>Estonian                                                                        </td></tr>
+<tr><td>eu           </td><td>Basque                                                                          </td></tr>
+<tr><td>fa           </td><td>Persian                                                                         </td></tr>
+<tr><td>ff           </td><td>Fulah                                                                           </td></tr>
+<tr><td>fi           </td><td>Finnish                                                                         </td></tr>
+<tr><td>fj           </td><td>Fijian                                                                          </td></tr>
+<tr><td>fo           </td><td>Faroese                                                                         </td></tr>
+<tr><td>fr           </td><td>French                                                                          </td></tr>
+<tr><td>fy           </td><td>Western Frisian                                                                 </td></tr>
+<tr><td>ga           </td><td>Irish                                                                           </td></tr>
+<tr><td>gd           </td><td>Gaelic, Scottish Gaelic                                                         </td></tr>
+<tr><td>gl           </td><td>Galician                                                                        </td></tr>
+<tr><td>gn           </td><td>Guarani                                                                         </td></tr>
+<tr><td>gu           </td><td>Gujarati                                                                        </td></tr>
+<tr><td>gv           </td><td>Manx                                                                            </td></tr>
+<tr><td>ha           </td><td>Hausa                                                                           </td></tr>
+<tr><td>he           </td><td>Hebrew                                                                          </td></tr>
+<tr><td>hi           </td><td>Hindi                                                                           </td></tr>
+<tr><td>ho           </td><td>Hiri Motu                                                                       </td></tr>
+<tr><td>hr           </td><td>Croatian                                                                        </td></tr>
+<tr><td>ht           </td><td>Haitian, Haitian Creole                                                         </td></tr>
+<tr><td>hu           </td><td>Hungarian                                                                       </td></tr>
+<tr><td>hy           </td><td>Armenian                                                                        </td></tr>
+<tr><td>hz           </td><td>Herero                                                                          </td></tr>
+<tr><td>ia           </td><td>Interlingua (International Auxiliary Language Association)                      </td></tr>
+<tr><td>id           </td><td>Indonesian                                                                      </td></tr>
+<tr><td>ie           </td><td>Interlingue, Occidental                                                         </td></tr>
+<tr><td>ig           </td><td>Igbo                                                                            </td></tr>
+<tr><td>ii           </td><td>Nuosu, Sichuan Yi                                                               </td></tr>
+<tr><td>ik           </td><td>Inupiaq                                                                         </td></tr>
+<tr><td>io           </td><td>Ido                                                                             </td></tr>
+<tr><td>is           </td><td>Icelandic                                                                       </td></tr>
+<tr><td>it           </td><td>Italian                                                                         </td></tr>
+<tr><td>iu           </td><td>Inuktitut                                                                       </td></tr>
+<tr><td>ja           </td><td>Japanese                                                                        </td></tr>
+<tr><td>jv           </td><td>Javanese                                                                        </td></tr>
+<tr><td>ka           </td><td>Georgian                                                                        </td></tr>
+<tr><td>kg           </td><td>Kongo                                                                           </td></tr>
+<tr><td>ki           </td><td>Gikuyu, Kikuyu                                                                  </td></tr>
+<tr><td>kj           </td><td>Kuanyama, Kwanyama                                                              </td></tr>
+<tr><td>kk           </td><td>Kazakh                                                                          </td></tr>
+<tr><td>kl           </td><td>Greenlandic, Kalaallisut                                                        </td></tr>
+<tr><td>km           </td><td>Central Khmer                                                                   </td></tr>
+<tr><td>kn           </td><td>Kannada                                                                         </td></tr>
+<tr><td>ko           </td><td>Korean                                                                          </td></tr>
+<tr><td>kr           </td><td>Kanuri                                                                          </td></tr>
+<tr><td>ks           </td><td>Kashmiri                                                                        </td></tr>
+<tr><td>ku           </td><td>Kurdish                                                                         </td></tr>
+<tr><td>kv           </td><td>Komi                                                                            </td></tr>
+<tr><td>kw           </td><td>Cornish                                                                         </td></tr>
+<tr><td>ky           </td><td>Kirghiz, Kyrgyz                                                                 </td></tr>
+<tr><td>la           </td><td>Latin                                                                           </td></tr>
+<tr><td>lb           </td><td>Letzeburgesch, Luxembourgish                                                    </td></tr>
+<tr><td>lg           </td><td>Ganda                                                                           </td></tr>
+<tr><td>li           </td><td>Limburgan, Limburgish, Limburger                                                </td></tr>
+<tr><td>ln           </td><td>Lingala                                                                         </td></tr>
+<tr><td>lo           </td><td>Lao                                                                             </td></tr>
+<tr><td>lt           </td><td>Lithuanian                                                                      </td></tr>
+<tr><td>lu           </td><td>Luba-Katanga                                                                    </td></tr>
+<tr><td>lv           </td><td>Latvian                                                                         </td></tr>
+<tr><td>mg           </td><td>Malagasy                                                                        </td></tr>
+<tr><td>mh           </td><td>Marshallese                                                                     </td></tr>
+<tr><td>mi           </td><td>Maori                                                                           </td></tr>
+<tr><td>mk           </td><td>Macedonian                                                                      </td></tr>
+<tr><td>ml           </td><td>Malayalam                                                                       </td></tr>
+<tr><td>mn           </td><td>Mongolian                                                                       </td></tr>
+<tr><td>mr           </td><td>Marathi                                                                         </td></tr>
+<tr><td>ms           </td><td>Malay                                                                           </td></tr>
+<tr><td>mt           </td><td>Maltese                                                                         </td></tr>
+<tr><td>my           </td><td>Burmese                                                                         </td></tr>
+<tr><td>na           </td><td>Nauru                                                                           </td></tr>
+<tr><td>nb           </td><td>Bokmål, Norwegian, Norwegian Bokmål                                             </td></tr>
+<tr><td>nd           </td><td>Ndebele, North, North Ndebele                                                   </td></tr>
+<tr><td>ne           </td><td>Nepali                                                                          </td></tr>
+<tr><td>ng           </td><td>Ndonga                                                                          </td></tr>
+<tr><td>nl           </td><td>Dutch, Flemish                                                                  </td></tr>
+<tr><td>nn           </td><td>Norwegian Nynorsk, Nynorsk, Norwegian                                           </td></tr>
+<tr><td>no           </td><td>Norwegian                                                                       </td></tr>
+<tr><td>nr           </td><td>South Ndebele                                                                   </td></tr>
+<tr><td>nv           </td><td>Navaho, Navajo                                                                  </td></tr>
+<tr><td>ny           </td><td>Chewa, Chichewa, Nyanja                                                         </td></tr>
+<tr><td>oc           </td><td>Occitan (post 1500)                                                             </td></tr>
+<tr><td>oj           </td><td>Ojibwa                                                                          </td></tr>
+<tr><td>om           </td><td>Oromo                                                                           </td></tr>
+<tr><td>or           </td><td>Oriya                                                                           </td></tr>
+<tr><td>os           </td><td>Ossetian, Ossetic                                                               </td></tr>
+<tr><td>pa           </td><td>Panjabi                                                                         </td></tr>
+<tr><td>pi           </td><td>Pali                                                                            </td></tr>
+<tr><td>pl           </td><td>Polish                                                                          </td></tr>
+<tr><td>ps           </td><td>Pashto, Pushto                                                                  </td></tr>
+<tr><td>pt           </td><td>Portuguese                                                                      </td></tr>
+<tr><td>qu           </td><td>Quechua                                                                         </td></tr>
+<tr><td>rm           </td><td>Romansh                                                                         </td></tr>
+<tr><td>rn           </td><td>Rundi                                                                           </td></tr>
+<tr><td>ro           </td><td>Romanian, Moldavian, Moldovan                                                   </td></tr>
+<tr><td>ru           </td><td>Russian                                                                         </td></tr>
+<tr><td>rw           </td><td>Kinyarwanda                                                                     </td></tr>
+<tr><td>sa           </td><td>Sanskrit                                                                        </td></tr>
+<tr><td>sc           </td><td>Sardinian                                                                       </td></tr>
+<tr><td>sd           </td><td>Sindhi                                                                          </td></tr>
+<tr><td>se           </td><td>Northern Sami                                                                   </td></tr>
+<tr><td>sg           </td><td>Sango                                                                           </td></tr>
+<tr><td>si           </td><td>Sinhala, Sinhalese                                                              </td></tr>
+<tr><td>sk           </td><td>Slovak                                                                          </td></tr>
+<tr><td>sl           </td><td>Slovenian                                                                       </td></tr>
+<tr><td>sm           </td><td>Samoan                                                                          </td></tr>
+<tr><td>sn           </td><td>Shona                                                                           </td></tr>
+<tr><td>so           </td><td>Somali                                                                          </td></tr>
+<tr><td>sq           </td><td>Albanian                                                                        </td></tr>
+<tr><td>sr           </td><td>Serbian                                                                         </td></tr>
+<tr><td>ss           </td><td>Swati                                                                           </td></tr>
+<tr><td>st           </td><td>Sotho, Southern                                                                 </td></tr>
+<tr><td>su           </td><td>Sundanese                                                                       </td></tr>
+<tr><td>sv           </td><td>Swedish                                                                         </td></tr>
+<tr><td>sw           </td><td>Swahili                                                                         </td></tr>
+<tr><td>ta           </td><td>Tamil                                                                           </td></tr>
+<tr><td>te           </td><td>Telugu                                                                          </td></tr>
+<tr><td>tg           </td><td>Tajik                                                                           </td></tr>
+<tr><td>th           </td><td>Thai                                                                            </td></tr>
+<tr><td>ti           </td><td>Tigrinya                                                                        </td></tr>
+<tr><td>tk           </td><td>Turkmen                                                                         </td></tr>
+<tr><td>tl           </td><td>Tagalog                                                                         </td></tr>
+<tr><td>tn           </td><td>Tswana                                                                          </td></tr>
+<tr><td>to           </td><td>Tonga (Tonga Islands)                                                           </td></tr>
+<tr><td>tr           </td><td>Turkish                                                                         </td></tr>
+<tr><td>ts           </td><td>Tsonga                                                                          </td></tr>
+<tr><td>tt           </td><td>Tatar                                                                           </td></tr>
+<tr><td>tw           </td><td>Twi                                                                             </td></tr>
+<tr><td>ty           </td><td>Tahitian                                                                        </td></tr>
+<tr><td>ug           </td><td>Uighur, Uyghur                                                                  </td></tr>
+<tr><td>uk           </td><td>Ukrainian                                                                       </td></tr>
+<tr><td>ur           </td><td>Urdu                                                                            </td></tr>
+<tr><td>uz           </td><td>Uzbek                                                                           </td></tr>
+<tr><td>ve           </td><td>Venda                                                                           </td></tr>
+<tr><td>vi           </td><td>Vietnamese                                                                      </td></tr>
+<tr><td>vo           </td><td>Volapük                                                                         </td></tr>
+<tr><td>wa           </td><td>Walloon                                                                         </td></tr>
+<tr><td>wo           </td><td>Wolof                                                                           </td></tr>
+<tr><td>xh           </td><td>Xhosa                                                                           </td></tr>
+<tr><td>yi           </td><td>Yiddish                                                                         </td></tr>
+<tr><td>yo           </td><td>Yoruba                                                                          </td></tr>
+<tr><td>za           </td><td>Chuang, Zhuang                                                                  </td></tr>
+<tr><td>zh           </td><td>Chinese                                                                         </td></tr>
+<tr><td>zu           </td><td>Zulu                                                                            </td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-license">Attribute: <code>Resource License</code><a class="headerlink" href="#attribute-resource-license" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                         </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>AAL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ADSL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-1.2                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-2.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AFL-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AGPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AGPL-3.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AMDPLPA                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AML                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>AMPAS                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ANTLR-PD                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APAFML                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-1.2                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>APSL-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Abstyles                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Adobe-2006                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Adobe-Glyph                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Afmparse                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Aladdin                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Apache-1.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Apache-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Apache-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-1.0-Perl                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-1.0-cl8                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Artistic-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-2-Clause                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-2-Clause-FreeBSD                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-2-Clause-NetBSD                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-Attribution            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-Clear                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-LBNL                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-No-Nuclear-License     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-No-Nuclear-License-2014</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-3-Clause-No-Nuclear-Warranty    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-4-Clause                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-4-Clause-UC                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-Protection                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-Source-Code                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSD-style                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BSL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Bahyph                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Barr                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Beerware                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BitTorrent-1.0                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>BitTorrent-1.1                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Borceux                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CATOSL-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-1.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-2.5                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-3.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-4.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-2.5                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-3.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-4.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-1.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-2.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-2.5                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-3.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-ND-4.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-1.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-2.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-2.5                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-3.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-NC-SA-4.0                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-2.5                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-3.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-ND-4.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-1.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-2.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-2.5                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-3.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC-BY-SA-4.0                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CC0-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CDDL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CDDL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-1.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-2.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-B                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CECILL-C                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CNRI-Jython                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CNRI-Python                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CNRI-Python-GPL-Compatible          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CPAL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CPOL-1.02                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CUA-OPL-1.0                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Caldera                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ClArtistic                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Condor-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Crossword                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>CrystalStacker                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cube                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>D-FSL-1.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DOC                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>DSDP                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dotseqn                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ECL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ECL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EFL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EFL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EUDatagrid                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EUPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>EUPL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Entessa                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ErlPL-1.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Eurosym                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FSFAP                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FSFUL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FSFULLR                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FTL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Fair                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Frameworx-1.0                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>FreeImage                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Freeware                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFDL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFDL-1.2                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GFDL-1.3                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GL2PS                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GPL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>GPL-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Giftware                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Glide                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Glulxe                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HPND                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>HaskellReport                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IBM-pibs                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ICU                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IJG                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IPA                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>IPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ISC                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ImageMagick                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Imlib2                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Info-ZIP                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Intel                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Intel-ACPI                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Interbase-1.0                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JSON                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>JasPer-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LAL-1.2                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LAL-1.3                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPL-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPL-2.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPL-3.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LGPLLR                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPL-1.02                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.1                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.2                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.3a                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LPPL-1.3c                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Latex2e                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Leptonica                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LiLiQ-P-1.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LiLiQ-R-1.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>LiLiQ-Rplus-1.1                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Libpng                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-CMU                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-advertising                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-enna                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MIT-feh                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MITNFA                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MPL-2.0-no-copyleft-exception       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MS-PL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MS-RL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MTLL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MakeIndex                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MirOS                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Motosoto                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Multics                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mup                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NASA-1.3                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NBPL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NCSA                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NGPL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NLOD-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NLPL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NOSL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NPOSL-3.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NRL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NTP                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Naumen                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>NetCDF                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Newsletr                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nokia                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Not licensed                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Noweb                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nunit                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OCCT-PL                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OCLC-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ODbL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OFL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OFL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OGTSL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.2                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.3                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-1.4                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.0.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.2                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.2.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.2.2                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.3                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.4                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.5                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.6                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.7                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OLDAP-2.8                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OML                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSET-PL-2.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-2.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OSL-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>OpenSSL                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PDDL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PHP-3.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PHP-3.01                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Plexus                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>PostgreSQL                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Proprietary                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Python-2.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>QPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Qhull                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RHeCos-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RPL-1.5                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RPSL-1.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RSA-MD                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>RSCPL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Rdisc                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ruby                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SAX-PD                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SCEA                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SGI-B-1.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SGI-B-1.1                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SGI-B-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SISSL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SISSL-1.2                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SMLNJ                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SMPPL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SNIA                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SWL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Saxpath                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sendmail                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SimPL-2.0                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sleepycat                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spencer-86                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spencer-94                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Spencer-99                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>SugarCRM-1.1.3                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TCL                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TMate                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TORQUE-1.1                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>TOSL                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>UPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Unicode-TOU                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Unlicense                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>VOSTROM                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>VSL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Vim                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>W3C                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>W3C-19980720                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>WTFPL                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Watcom-1.0                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Wsuipa                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>X11                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>XFree86-1.1                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>XSkat                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Xerox                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Xnet                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>YPL-1.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>YPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ZPL-1.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ZPL-2.0                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ZPL-2.1                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zed                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zend-2.0                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zimbra-1.3                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zimbra-1.4                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Zlib                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>bzip2-1.0.5                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>bzip2-1.0.6                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>curl                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>diffmark                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>dvipdfm                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>eGenix                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>gSOAP-1.3b                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>gnuplot                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>iMatix                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>libtiff                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>mpich2                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>psfrag                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>psutils                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>xinetd                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>xpp                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>zlib-acknowledgement                </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-media-accessibility">Attribute: <code>Resource Media Accessibility</code><a class="headerlink" href="#attribute-resource-media-accessibility" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value             </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Alternative Text        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Audio Description       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Braille                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Captions                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>ChemML                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Described Math          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Display Transformability</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Haptic                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>High Contrast           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Large Print             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Latex                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Long Description        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>MathML                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nemeth Braille          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sign Language           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Structural Navigation   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Tactile Graphics        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Text Transcript         </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-origin-institution">Attribute: <code>Resource Origin Institution</code><a class="headerlink" href="#attribute-resource-origin-institution" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                                                 </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Arizona State University                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Auburn University                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Barrow Neurological Institute                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Baylor College Of Medicine                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Beth Israel Deaconess Hospital                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Boston Medical Center                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Boston University                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Brigham and Womens Hospital                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>California Institute of Technology                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Childrens Hospital of Philadelphia                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>City Of Hope                                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cleveland Clinic                                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cold Spring Harbor Laboratory                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Columbia University                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Cornell University                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dana-Farber Cancer Institute                                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Dartmouth College                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Duke University                                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Emory University                                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Georgia Institute of Technology                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Harvard Medical School                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Harvard University                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Hebrew University of Jerusalem                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Houston Methodist                                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Indiana University                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Indiana University - Purdue University Indianapolis         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Institute for Systems Biology                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Jackson Laboratory                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Johns Hopkins University                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Lurie Children&#x27;s Hospital                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Massachusetts General Hospital                              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Massachusetts Institute of Technology                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mayo Clinic                                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Memorial Sloan Kettering Cancer Center                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Moffitt Cancer Center                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Northeastern University                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>New York University                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Northwestern University                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Oregon Health &amp; Science University                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Pacific Northwest National Laboratory                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Rockefeller University                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Sage Bionetworks                                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Salk Institute for Biological Studies                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>St. Jude Children&#x27;s Research Hospital                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Stanford University                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Stony Brook University                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>The University of Texas Health Science Center at San Antonio</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Alabama at Birmingham                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Arizona                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of California; Berkeley                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of California; Irvine                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of California; Los Angeles                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of California; San Diego                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of California; San Francisco                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Chicago                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Chicago Medical Center                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Colorado Denver                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Delaware                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Florida                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Illinois                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Illinois at Chicago                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Massachusetts Medical School                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Miami                                         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Michigan                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Nevada Reno                                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Minnesota                                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of New South Wales                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of North Carolina at Chapel Hill                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Pennsylvania                                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Pittsburgh                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Southern California                           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Texas MD Anderson Cancer Center               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Texas Southwestern Medical Center             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Texas at Austin                               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Utah                                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Virginia                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Washington                                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>University of Wisconsin-Madison                             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Vanderbilt University                                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Washington University in St. Louis                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Wake Forest                                                 </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Weill Cornell Medicine                                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Wistar Institute                                            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Yale University                                             </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-primary-audience">Attribute: <code>Resource Primary Audience</code><a class="headerlink" href="#attribute-resource-primary-audience" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value     </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Student         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Teacher         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Administrator   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Parent          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Professor       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>General Audience</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other           </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-primary-format">Attribute: <code>Resource Primary Format</code><a class="headerlink" href="#attribute-resource-primary-format" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value      </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Audio            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Braille/BNF      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Downloadable docs</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>eBook            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Graphics/Photos  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Interactive      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mobile           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Text/HTML        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Video            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other            </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-topic">Attribute: <code>Resource Topic</code><a class="headerlink" href="#attribute-resource-topic" title="Permanent link">&para;</a></h2>
+<div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
+
+<table>
+<thead>
+<tr><th>Valid Value                    </th><th style="text-align: right;">  Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Computational Model Development</td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Computational Resource         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Diversity/Equity/Inclusion     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Drug Resistance/Sensitivity    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Epigenetics                    </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Evolution                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Experimental Model Development </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Heterogeneity                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Immunotherapy                  </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mechano-genetics               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Mechano-resistance             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Metabolism                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Metastasis                     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Method/Assay Development       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Microenvironment               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Oncogenic Stress               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Other                          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Outreach                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Platform Development           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Training Material              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Tumor Progression              </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Tumor-Immune                   </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Computer Science               </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Environmental Science          </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Information Science            </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Educational Technology         </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Anatomy/Physiology             </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Biology                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Ecology                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Genetics                       </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Nutrition                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Measurement and Data           </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Statistics and Probability     </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Chemistry                      </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Physics                        </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Systems Biology                </td><td style="text-align: right;">          nan</td></tr>
+<tr><td>Patient Advocacy               </td><td style="text-align: right;">          nan</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<h2 id="attribute-resource-secondary-topic">Attribute: <code>Resource Secondary Topic</code><a class="headerlink" href="#attribute-resource-secondary-topic" title="Permanent link">&para;</a></h2>
+<p>See <a href="#attribute-resource-topic">Resource Topic</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
