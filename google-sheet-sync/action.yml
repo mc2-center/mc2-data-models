@@ -1,0 +1,15 @@
+name: "Google Sheet Sync for RFC Integration"
+description: "Syncs a Google Sheet with a GitHub repository as a CSV for the purpose of RFC Integration."
+inputs:
+  spreadsheet_id:
+    description: "The ID of the Google Sheet to monitor."
+    required: true
+  stop_time:
+    description: "The UTC time (HH:MM) at which the action should stop."
+    required: true
+  stop_day:
+    description: "The day (YYYY-MM-DD) on which the action should stop."
+    required: true
+runs:
+  using: "python"
+  main: "sync.py"

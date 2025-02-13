@@ -1,0 +1,47 @@
+name: "Google Sheet Sync"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Run once a day at midnight UTC
+  workflow_dispatch:  
+    inputs:
+      spreadsheet_id:
+        description: "The ID of the Google Sheet to monitor."
+        required: true
+      stop_time:
+        description: "The UTC time (HH:MM) at which the action should stop."
+        required: true
+      stop_day:
+        description: "The day (YYYY-MM-DD) on which the action should stop."
+        required: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-api-python-client PyGithub google-auth
+
+      - name: Create Google Credentials File
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: |
+          echo "${GOOGLE_CREDENTIALS}" > google-credentials.json
+
+      - name: Run Google Sheet Sync
+        env:
+          INPUT_SPREADSHEET_ID: ${{ github.event.inputs.spreadsheet_id }}
+          INPUT_STOP_TIME: ${{ github.event.inputs.stop_time }}
+          INPUT_STOP_DAY: ${{ github.event.inputs.stop_day }}
+          GITHUB_TOKEN: ${{ secrets.RFC_TOKEN }}
+        run: python google-sheet-sync/sync.py
