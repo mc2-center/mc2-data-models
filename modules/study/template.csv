@@ -1,0 +1,18 @@
+Attribute,Description,Required,Validation Rules,Examples
+Study,Studies associated with a grant,False,_None_,ProjectView_45678
+Study,Studies associated with a grant,False,_None_,ProjectView_45678
+Study Name,Name of the study,True,str,Effects of Diet and Exercise on Cancer
+Study Description,"Description of the study, including the types of experimental assays, model systems, types of analysis, etc.",True,str,Analysis of Cancerous Cell Response during Exercise
+Study Investigator,Investigator(s) associated with the project. Multiple names should be provided as a comma-separated list.,True,list like,Dr. Jane Smith
+Study Reuse Statement,"The funder-, contributor-, patient-, etc., derived content that includes terms, conditions, or statements associated with accessing and reusing the resource(s).",False,str,Data from this study can be used for future research purposes under the conditions that all information is properly cited and referenced.
+Study_id,A unique primary key that enables record updates using schematic.,True,unique,STUDY_2021_01Biology
+Study Number of Participants,The number of participant instances associated with systematic investigation into a subject. ,True,int,5000
+[Study De-identification Method Type](../valid_values/study.md#attribute-study-de-identification-method-type),General description of the de-identification method,True,_None_,Manual
+[Study De-identification Method Type](../valid_values/study.md#attribute-study-de-identification-method-type),General description of the de-identification method,True,_None_,Manual
+Study De-identification Method Description,Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.,False,str,"All personal identifiable information such as names, addresses, and identification numbers were removed from the data. The dates were also shifted to a random point in the future to preserve the temporal relationships but without revealing the actual dates. The datasets were further reviewed and verified by a privacy officer to ensure all participants' identity is completely unidentifiable."
+Study De-identification Method Software,Software that was used to de-identify the images (if used),False,str,Safe Harbor Method Software
+Study dbGaP Accession Id,A stable unique alphanumeric identifier assigned to a study and any objects by the database of Genotypes and Phenotypes (dbGaP). Required for controlled access data being submitted to CDS/CRDC.,False,str,phs000424.v7.p2
+[Study License](../valid_values/study.md#attribute-study-license),Official or legal permission to do or own a specified thing. Studies with data that will be submitted to CDS are required to provide a license.,False,_None_,CC BY-NC 4.0
+[Study Data Use Codes](../valid_values/study.md#attribute-study-data-use-codes),"DUO code - A data item that is used to indicate consent permissions for datasets and/or materials and relates to the purposes for which datasets and/or material might be removed, stored, or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/sharingPlans/#attribute-dsp-data-use-codes",False, list like,NCU
+[Study Index Date](../valid_values/study.md#attribute-study-index-date),"The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.",False,_None_,Diagnosis Date
+[Study Index Date](../valid_values/study.md#attribute-study-index-date),"The reference event associated with timepoints in this study. One of Diagnosis Date, Enrollment Date, Collection Date, or Birth Date.",False,_None_,Diagnosis Date

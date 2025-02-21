@@ -1,0 +1,18 @@
+Attribute,Description,Required,Validation Rules,Examples
+Grant Name,Name of the grant,True,_None_,CA202177: Mechanistic Modeling of Cancer Cell Migration
+Grant Number,"Number of the grant (i.e. ""CA------"" format)",True,regex search ^CA\\d{6}$,CA202177
+Grant Abstract,Abstract for the grant,True,_None_,This study investigates the mechanisms of cancer cell migration through advanced modeling techniques.
+[Grant Type](../valid_values/grant.md#attribute-grant-type),Type of grant,True,_None_,R01
+Grant View,The denormalized manifest for grant submission.,False,_None_,Public Profile View
+[Grant Theme Name](../valid_values/grant.md#attribute-grant-theme-name),Theme(s) associated with the grant. 1...*,True,list like,"Computational Model Development, Mechano-genetics"
+[Grant Institution Name](../valid_values/grant.md#attribute-grant-institution-name),The full name of the institution(s) associated with the grant. (e.g. Harvard University). 1...*,True,list like,"Harvard University, Massachusetts Institute of Technology"
+[Grant Institution Alias](../valid_values/grant.md#attribute-grant-institution-alias),The alias of the institution(s) associated with the grant (e.g. UCSD). 1...*,True,list like,"Harvard, MIT"
+Grant Investigator,Investigator(s) associated witht the grant. 1...*,True,list like,"Dr. John Smith, Dr. Jane Doe"
+[Grant Consortium Name](../valid_values/grant.md#attribute-grant-consortium-name),Consortium(s) associated with the grant. 1...1,True,_None_,CSBC
+GrantView_id,A unique primary key that enables record updates using schematic.,True,unique,GrantView_12345
+Grant Synapse Team,"The Synapse team associated with the grant, created by the MC2 Center",False,url,https://www.synapse.org/#!Team:123456
+Grant Synapse Project,"The Synapse project associated with the grant, created by the MC2 Center",False,url,https://www.synapse.org/#!Synapse:syn12345678
+Grant Start Date,The start date of the grant YYYY-MM-DD format,True,date,2021-01-01
+NIH RePORTER Link,Link to the search results for this grant number on the NIH Reporter website,True,url,https://reporter.nih.gov/project-details/12345678
+Duration of Funding,"Duration of the funding period, in years",False,int,5
+Embargo End Date,Date at which an embargo on related resources had lifted,False,date,2026-01-01

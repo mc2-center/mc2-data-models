@@ -76,12 +76,12 @@ When a new valid value needs to be added to the data model:
    CSV in `./modules`. If not:
 
 2. Add the valid value in the "attribute" column of the applicable csv in
-   the appropriate module folder. E.g. if a new tumor type needs to be added
-   go to `tumorType.csv` and add the new term in the attribute column). Fill
-   out the rest of the columns as completely as possible, this includes the
-   description, the required column, parent column, source column, non-preferred
-   terms column, the ontology identifier, url, NCIt Code, and any notes.
-   Please make a note of who added it and the date.
+the appropriate module folder. E.g. if a new tumor type needs to be added
+go to `tumorType.csv` and add the new term in the attribute column). Fill
+out the rest of the columns as completely as possible, this includes the
+description, the required column, parent column, source column, non-preferred
+terms column, the ontology identifier, url, NCIt Code, and any notes.
+Please make a note of who added it and the date.
 
 3. Be sure to look up any synonyms and add to the "non preferred terms"
    column. This will make annotating easier in the future.
@@ -101,6 +101,85 @@ CCKP.
 
 Thank you helping us continuously improve the MC2 Center data models!  To
 contribute, please read our [contributing guidelines] on the docs site.
+
+
+## Setup and Deployment Instructions
+
+To get started with this project, follow these steps:
+
+### 1. Install Python and Pip
+Ensure you have Python installed on your system. If you don’t have it installed:
+
+- Visit [Python's official website](https://www.python.org/) and download the latest stable release.
+- During installation, ensure you check the option to **Add Python to PATH**.
+
+Next, ensure that `pip` is also installed and configured. You can check by running:
+
+```bash
+python --version
+pip --version
+```
+
+If `pip` is missing, you can install it by downloading and running `get-pip.py` from [pip's official site](https://pip.pypa.io/en/stable/installation/).
+
+### 2. Set Up a Virtual Environment
+Create a virtual environment to isolate dependencies for this project.
+
+```bash
+python -m venv venv
+```
+
+This command creates a virtual environment named `venv` in your project directory.
+
+Activate the virtual environment:
+
+- On macOS/Linux:
+  ```bash
+  source venv/bin/activate
+  ```
+- On Windows:
+  ```cmd
+  venv\Scripts\activate
+  ```
+
+Once activated, your terminal prompt should show the environment name (`venv`).
+
+### 3. Install Dependencies
+With the virtual environment activated, install the necessary packages:
+
+```bash
+pip install mkdocs
+pip install mkdocs-material
+pip install mkdocs-table-reader-plugin
+```
+
+### 4. Preview the Documentation Site
+Run the following command to start a local server and preview the documentation site:
+
+```bash
+mkdocs serve
+```
+
+Open the displayed URL (usually `http://127.0.0.1:8000/`) in your browser to view the site.
+
+### 5. Submit Built Pages to GitHub
+To publish the documentation site on GitHub Pages, follow these steps:
+
+1. Build the static site files:
+   ```bash
+   mkdocs build
+   ```
+   This will generate a `site/` directory containing the built HTML files.
+
+2. Commit the built files to the `gh-pages` branch:
+   ```bash
+   git add site/
+   git commit -m "Build site for deployment"
+   git push origin `git subtree split --prefix site master`:gh-pages --force
+   ```
+
+3. Verify that the site is live at your GitHub Pages URL (e.g., `https://<username>.github.io/<repository>`).
+
 
 
 [Cancer Complexity Knowledge Portal]: https://cancercomplexity.synapse.org/

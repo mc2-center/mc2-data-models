@@ -1,0 +1,25 @@
+Attribute,Example
+Educational Resource,"""Online Tutoring Platform"""
+Resource Title,"""Introduction to Biology"""
+Resource Link,https://www.example.com/resource_page.html
+Resource Topic,Metabolism
+Resource Activity Type,Simulation
+Resource Primary Format,Video
+Resource Intended Use,"""Curriculum/Instruction"""
+Resource Primary Audience,Teacher
+Resource Educational Level,High School
+Resource Description,"""This comprehensive e-book introduces readers to the world of biology"""
+Resource Origin Institution,Smithsonian Institution
+Resource Language,en
+Resource Contributors,"John Smith, Jane Doe, XYZ Corporation"
+Resource Grant Number,CA217655
+Resource Secondary Topic,Cancer Research
+Resource License,Apache-2.0
+Resource Use Requirements,The software application requires 2GB of RAM and 20GB of hard drive space. It also needs a graphic card supporting OpenGL 2.0. The system must run on Windows 10 or higher.
+Resource Alias,Nan
+Resource Internal Identifier,ResourceID_56789
+Resource Media Accessibility,"The educational video on the website provides 'Captions' for viewers with hearing impairments, making it an excellent example of 'Resource Media Accessibility'."
+Resource Access Hazard,"An example for the attribute 'Resource Access Hazard' could be a website for a video game which includes flashing images and intense sequences of motion. The site also uses loud sounds and high intensity simulations which some users can find distressing or harmful, particularly if they have conditions such as epilepsy or severe motion sickness. Therefore, the website has a potential ""Resource Access Hazard."""
+Resource Dataset Alias,Nan
+Resource Tool Link,https://www.khanacademy.org/
+EducationalResource_id,ER_4567

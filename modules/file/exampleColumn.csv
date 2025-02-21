@@ -1,0 +1,20 @@
+Attribute,Example
+File Description,"""CSV file containing gene expression data for breast cancer"""
+File Design,CSV
+File Url,[https://www.example.com/files/breast_cancer_expression_data.csv](https://www.example.com/files/breast_cancer_expression_data.csv)
+File Assay,RNA Sequencing
+File Level,"Level 3: Processed summary data, like gene expression counts or coverage statistics (e.g., CSV files)"
+File Species,Human
+File Tumor Type,Breast Carcinoma
+File Tissue,Breast
+File View,List View
+FileView_id,"""FileView_123456"""
+File Longitudinal Group,
+File Longitudinal Event Type,"A valid value for 'File Longitudinal Event Type' might be ""FileCreated"", ""FileModified"", ""FileDeleted"", or ""FileRenamed""."
+File Longitudinal Sequence Identifier,10-9876543210-12
+File Longitudinal Time Elapsed Unit,Seconds
+File Longitudinal Sequential Time Elapsed,"""2 hours 45 minutes"""
+File Longitudinal Total Time Elapsed,"""120 minutes"""
+File Format,CSV
+File Alias,"""Breast_Cancer_Gene_Expression.csv"""
+File Anatomic Site,"Brain stem, Cervix uteri"

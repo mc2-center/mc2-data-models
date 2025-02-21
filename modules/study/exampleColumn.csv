@@ -1,0 +1,15 @@
+Attribute,Example
+Study,"ProjectView_45678"
+Study Name,"Effects of Diet and Exercise on Cancer"
+Study Description,"Analysis of Cancerous Cell Response during Exercise"
+Study Investigator,Dr. Jane Smith
+Study Reuse Statement,"Data from this study can be used for future research purposes under the conditions that all information is properly cited and referenced."
+Study_id,STUDY_2021_01Biology
+Study Number of Participants,5000
+Study De-identification Method Type,Manual
+Study De-identification Method Description,"All personal identifiable information such as names, addresses, and identification numbers were removed from the data. The dates were also shifted to a random point in the future to preserve the temporal relationships but without revealing the actual dates. The datasets were further reviewed and verified by a privacy officer to ensure all participants' identity is completely unidentifiable."
+Study De-identification Method Software,"Safe Harbor Method Software"
+Study dbGaP Accession Id,phs000424.v7.p2
+Study License,CC BY-NC 4.0
+Study Data Use Codes,NCU
+Study Index Date,Diagnosis Date

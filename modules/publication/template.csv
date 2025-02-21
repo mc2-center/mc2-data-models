@@ -1,0 +1,18 @@
+Attribute,Description,Required,Validation Rules,Examples
+Publication Doi,The digital object identifier associated with the publication in the form of https://www.doi.org/{doi} to comply with CrossRef DOI display guidelines.,False,unique,10.1016/j.cell.2016.02.013
+Publication Journal,The name of the periodical publication in which the publication was published.,True,_None_,The New England Journal of Medicine
+Pubmed Id,The PubMed identifier associated with the publication.,True,unique,26571401
+Pubmed Url,Pubmed URL for the publication,True,url,https://www.ncbi.nlm.nih.gov/pubmed/12345678
+Publication Title,Title of the publication,True,_None_,The New York Times
+Publication Year,Year of the publication,True,_None_,2018
+Publication Keywords,"Keywords associated with the publication. Multiple values permitted, comma separated.",False,list like,"Cancer Pathways, Inflammation, Tumor Microenvironment"
+Publication Authors,"Authors of the publication. Multiple values permitted, comma separated.",True,list like,"Dr. Sarah Johnson, Dr. Michael Lee, Prof. Amanda Carter"
+Publication Abstract,The abstract of the publication.,True,_None_,Nan
+[Publication Assay](../valid_values/publication.md#attribute-publication-assay),"Assay(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,In Vivo Bioluminescence
+[Publication Tumor Type](../valid_values/publication.md#attribute-publication-tumor-type),"Tumor type(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,Acute Lymphoblastic Leukemia
+[Publication Tissue](../valid_values/publication.md#attribute-publication-tissue),"Tissue type(s) associated with the publication. Multiple values permitted, comma separated.",True,list like,Brain
+[Publication Accessibility](../valid_values/publication.md#attribute-publication-accessibility),Whether there are non-monetary restrictions on accessing an the publication.,True,_None_,Open Access
+Publication View,The denormalized manifest for publication submission.,False,_None_,Online
+[Publication Grant Number](../valid_values/publication.md#attribute-publication-grant-number),"Relevant grant number associated witht the publication's development. Multiple values permitted, comma separated.",True,list like,CA202123
+Publication Dataset Alias,"A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the publication. Multiple values permitted, comma separated.",False,list like,"GSE45678, DOI:10.1000/exampledataset"
+PublicationView_id,A unique primary key that enables record updates using schematic.,True,unique,PublicationView_45678

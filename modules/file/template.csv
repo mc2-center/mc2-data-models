@@ -1,0 +1,23 @@
+Attribute,Description,Required,Validation Rules,Examples
+File Description,Description of the file.,False,str,"""CSV file containing gene expression data for breast cancer"""
+File Design,The overall design of the dataset or file.,False,str,CSV
+File Url,The url of where the file is stored.,True,url,[https://www.example.com/files/breast_cancer_expression_data.csv](https://www.example.com/files/breast_cancer_expression_data.csv)
+[File Assay](../valid_values/file.md#attribute-file-assay),The assay the file is representative of.,True,_None_,RNA Sequencing
+[File Level](../valid_values/file.md#attribute-file-level),The processing level the file can be mapped to. ,True,_None_,"Level 3: Processed summary data, like gene expression counts or coverage statistics (e.g., CSV files)"
+[File Level](../valid_values/file.md#attribute-file-level),The processing level the file can be mapped to. ,True,_None_,"Level 3: Processed summary data, like gene expression counts or coverage statistics (e.g., CSV files)"
+[File Species](../valid_values/file.md#attribute-file-species),"The species the data was collected on. Multiple values permitted, comma separated.",True,list like,Human
+[File Tumor Type](../valid_values/file.md#attribute-file-tumor-type),"The tumor type(s), if applicable, of the data collected. Multiple values permitted, comma separated.",False,list like,Breast Carcinoma
+[File Tissue](../valid_values/file.md#attribute-file-tissue),"Tissue type(s) associated with the file. Multiple values permitted, comma separated.",False,list like,Breast
+File View,The denormalized manifest for file submission.,False,_None_,List View
+File View,The denormalized manifest for file submission.,False,_None_,List View
+FileView_id,A unique primary key that enables record updates using schematic.,True,unique,"""FileView_123456"""
+File Longitudinal Group,A label that can be used to identify groups of files from the same longitudinal/time-resolved experiment,False,str,
+[File Longitudinal Event Type](../valid_values/file.md#attribute-file-longitudinal-event-type),"The type of event associated with collection of the data contained in the file (e.g., time increment, treatment time elapsed)",False,str,"A valid value for 'File Longitudinal Event Type' might be ""FileCreated"", ""FileModified"", ""FileDeleted"", or ""FileRenamed""."
+[File Longitudinal Event Type](../valid_values/file.md#attribute-file-longitudinal-event-type),"The type of event associated with collection of the data contained in the file (e.g., time increment, treatment time elapsed)",False,str,"A valid value for 'File Longitudinal Event Type' might be ""FileCreated"", ""FileModified"", ""FileDeleted"", or ""FileRenamed""."
+File Longitudinal Sequence Identifier,"The order in which this file was collected with respect to the longitudinal experiment (e.g., 1, 2, etc.). Integer.",False,int,10-9876543210-12
+File Longitudinal Time Elapsed Unit,The unit of time associated with Sequential and Total Time Elapsed attributes.,False,str,Seconds
+File Longitudinal Sequential Time Elapsed,The time elapsed between collecting the current and previous files in this longitudinal group. ,False,num,"""2 hours 45 minutes"""
+File Longitudinal Total Time Elapsed,The total time elapsed between the first and current files contained this longitudinal group. ,False,num,"""120 minutes"""
+[File Format](../valid_values/file.md#attribute-file-format),The format of the file described by this entry.,True,_None_,CSV
+File Alias,"A string identifier associated with the file. Must be unique. Can be the repository accesssion number (e.g., Synapse ID, GEO identifier such as GSE12345). No Greek Letters or DOIs.",True,unique,"""Breast_Cancer_Gene_Expression.csv"""
+[File Anatomic Site](../valid_values/file.md#attribute-file-anatomic-site),The anatomic site associated with the data contained in this file.,True,list like,"Brain stem, Cervix uteri"

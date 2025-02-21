@@ -1,0 +1,29 @@
+Attribute,Description,Required,Validation Rules,Examples
+DataDSP,Dataset sharing plan information. Used to indicate planned usage of MC2 Center supported Synapse projects.,False,_None_,
+DataDSP,Dataset sharing plan information. Used to indicate planned usage of MC2 Center supported Synapse projects.,False,_None_,
+DSP Dataset Name,Name of the dataset,True,str,DSP_Dataset_Lung_Research_2021
+DSP Dataset Alias,"Alias of the dataset. For Synapse storage, the Synapse id associated with the storage folder should be used. Must be unique.",False,unique,Syn123456
+DSP Dataset Alias,"Alias of the dataset. For Synapse storage, the Synapse id associated with the storage folder should be used. Must be unique.",False,unique,Syn123456
+[DSP Dataset Assay](../valid_values/sharingPlans.md#attribute-dsp-dataset-assay),"The type of data contained in this group of files. Multiple values permitted, comma separated.",True,list like,3D Bioprinting
+[DSP Dataset Species](../valid_values/sharingPlans.md#attribute-dsp-dataset-species),"The species the data was collected on. Multiple values permitted, comma separated.",True,list like,Asian Elephant
+[DSP Dataset Tumor Type](../valid_values/sharingPlans.md#attribute-dsp-dataset-tumor-type),"The tumor type(s), if applicable, of the data collected on. Multiple values permitted, comma separated.",False,list like,Lung Carcinoma
+[DSP Dataset Tissue](../valid_values/sharingPlans.md#attribute-dsp-dataset-tissue),"Tissue type(s) associated with the dataset. Multiple values permitted, comma separated.",False,list like,Brain
+[DSP Dataset File Formats](../valid_values/sharingPlans.md#attribute-dsp-dataset-file-formats),"A list of file formats associated with the dataset. Multiple values permitted, comma separated.",False,list like,CSV
+DataDSP_id,A unique primary key that enables record updates using schematic.,True,unique,DataDSP_56789
+[DSP Dataset Level](../valid_values/sharingPlans.md#attribute-dsp-dataset-level),The level of processing associated with the dataset.,False,list like,Level 3
+[DSP Dataset Level](../valid_values/sharingPlans.md#attribute-dsp-dataset-level),The level of processing associated with the dataset.,False,list like,Level 3
+DSP Number of Files,The number of files that will be uploaded as part of this dataset.,False,num,25
+DSP Number of Samples,The number of biospecimens associated with the files included in the dataset,False,num,50000
+DSP Number of Participants,The number of individuals or model organisms from which samples were collected to generate the dataset.,False,num,12
+DSP Storage Size,The expected total storage space required for the dataset in gigabytes (GB),False,num,16 GB
+DSP Planned Upload Date,"A non-binding, estimated date by which the files are expected to be uploaded to a repository.",True,date,2022-12-01
+DSP Planned Release Date,The projected date that marks the end of any requested or required sharing embargo for the dataset.,False,date,01/25/2023
+[DSP Dataset Grant Number](../valid_values/sharingPlans.md#attribute-dsp-dataset-grant-number),"Grant number(s) associated with the dataset's development. Multiple values permitted, comma separated.",True,list like,CA209971
+DSP Dataset Url,"The url where the dataset is or will be stored. For Synapse storage, the Synapse url or doi associated with the dataset storage folder should be used.",False,url,https://www.example.com/dataset/dsp1234
+DSP Dataset Url,"The url where the dataset is or will be stored. For Synapse storage, the Synapse url or doi associated with the dataset storage folder should be used.",False,url,https://www.example.com/dataset/dsp1234
+[DSP Data Use Codes](../valid_values/sharingPlans.md#attribute-dsp-data-use-codes),"DUO code - A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Available DUO code definitions can be found here: https://mc2-center.github.io/data-models/valid_values/sharingPlans/#attribute-dsp-data-use-codes ",False,list like,"If a research institution is using certain data for health and medicine-based studies, then their DSP Data Use Codes could be ""HMB""."
+DSP IRB Form,The Synapse Id for the executed IRB protocol or exemption document that was uploaded to Synapse. Required if human-derived data was generated for this study and will be uploaded as part of this dataset,False,regex match syn\\d+,"DSP IRB Form V2.0, 2020"
+DSP Dataset Description,A text description of the files contained in this dataset.,False,str,A quick description of your data sharing plan.
+DSP Dataset Destination,An identifier representing the repository in which this dataset is intended to be held for long term preservation.,False,str,/home/user/datasets/dsp_output
+DSP Dataset Metadata,The link(s) corresponding to metadata templates that should be used to record information about this data. This field will be populated by the MC2 Center after plan submission.,False,list like,https://example.com/metadata-template-1
+DSP Dataset Metadata,The link(s) corresponding to metadata templates that should be used to record information about this data. This field will be populated by the MC2 Center after plan submission.,False,list like,https://example.com/metadata-template-1

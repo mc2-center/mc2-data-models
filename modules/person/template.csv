@@ -1,0 +1,20 @@
+Attribute,Description,Required,Validation Rules,Examples
+Name,Name of the individual,True,_None_,John Doe
+Alternative Names,"Other ways the individual's name is displayed. Multiple values permitted, comma separated.",False,list like,"Bob, Bobby, Robert"
+Email,Email address of the individual,False,_None_,johndoe@example.com
+Url,"URL, e.g., individual's home page address",False,_None_,https://www.google.com
+Orcid Id,Unique identifier (ORCID ID) of the individual,False,regex search \\d{4}\\-\\d{4}\\-\\d{4}\\-\\d{3}(\\d|X),0000-0002-1825-0097
+Synapse Profile Id,Unique identifier (Synapse Profile ID) of the individual. See identifer in the url of the synapse profile page. ,False,unique,SP12345678
+Last Known Institution,Last known institutional affiliation of the individual.,True,_None_,Harvard University
+[Working Group Participation](../valid_values/person.md#attribute-working-group-participation),"CSBC/PSON working group(s) of which the individual is a member (current and former). Multiple values permitted, comma separated.",True,list like,Cell and Tissue Mechanics
+[Chair Roles](../valid_values/person.md#attribute-chair-roles),"Committee or working group chair role(s) the individual fulfilled (current and former). Multiple values permitted, comma separated.",True,list like,Steering Committee
+[Consent For Portal Display](../valid_values/person.md#attribute-consent-for-portal-display),Consent from individual to display Person information in the CCKP,True,_None_,Yes
+[Portal Display](../valid_values/person.md#attribute-portal-display),Display content in CCKP,True,_None_,TRUE
+Person View,The denormalized manifest for person submission.,False,_None_,Public Profile View
+[Person Grant Number](../valid_values/person.md#attribute-person-grant-number),"Grant number(s) associated with the person. Multiple values permitted, comma separated.",True,list like,CA202177
+[Person Consortium Name](../valid_values/person.md#attribute-person-consortium-name),"Consortium(s) associated with the person. Multiple values permitted, comma separated.",True,list like,PDMC
+Person Publications,"A list of the pubmed Ids associated with the person. Multiple values permitted, comma separated.",False,list like,"23761710,23761712,23762511"
+Person Datasets,"A list of the dataset aliases (An alias of the dataset must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters) associated with the person. Multiple values permitted, comma separated.",False,list like,GSE12345
+Person Tools,"A list of the tool names associated with the person. Multiple values permitted, comma separated.",False,list like,"R Studio, Python, Jupyter Notebook"
+Person Educational Resources,"A list of educational resource identifiers associated with the person. Multiple values permitted, comma separated.",False,list like,Nan
+PersonView_id,A unique primary key that enables record updates using schematic.,True,unique,PersonView_12345

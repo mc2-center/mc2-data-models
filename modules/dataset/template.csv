@@ -1,0 +1,16 @@
+Attribute,Description,Required,Validation Rules,Examples
+Dataset Name,Name of the dataset,True,_None_,RNA Sequencing of Lung Cancer Samples 2021
+Dataset Alias,"Alias of the dataset. Must be unique. Can be the GEO identifier such as GSE12345, or a DOI. No Greek Letters.",True,unique,GSE56789
+Dataset Description,Description of the dataset.,False,_None_,"This dataset contains RNA sequencing data from 200 lung cancer samples, including gene expression profiles and patient clinical data. It is designed to study differential gene expression and mutation burden across tumor stages."
+Dataset Design,The overall design of the dataset.,False,_None_,"'Cross-sectional' to compare gene expression in healthy vs. tumor tissues, or 'Time-series' to observe changes during treatment."
+Dataset Url,The url of where the dataset is stored.,True,url,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56789
+Dataset Doi,The Digital Object Identifier (DOI) associated with the dataset.,True,url,
+[Dataset Assay](../valid_values/dataset.md#attribute-dataset-assay),"The assay the dataset is representative of. Multiple values permitted, comma separated.",True,list like,RNA Sequencing
+[Dataset Species](../valid_values/dataset.md#attribute-dataset-species),"The species the data was collected on. Multiple values permitted, comma separated.",True,list like,Homo sapiens
+[Dataset Tumor Type](../valid_values/dataset.md#attribute-dataset-tumor-type),"The tumor type(s), if applicable, of the data collected on. Multiple values permitted, comma separated.",False,list like,Glioblastoma
+[Dataset Tissue](../valid_values/dataset.md#attribute-dataset-tissue),"Tissue type(s) associated with the dataset. Multiple values permitted, comma separated.",False,list like,Lung
+[Dataset File Formats](../valid_values/dataset.md#attribute-dataset-file-formats),"A list of file formats associated with the dataset. Multiple values permitted, comma separated.",False,list like,"""AVI, BAI, BAM, BED, CDS, CHP, COOL, CSV, DAE, DB, DS_Store, FASTA, FASTQ, FCS, FIG, FREQ, GCG, GCT, GCTx, GFF3, GTF, GZIP Format, HDF, HDF5, HTML, IDAT, JPG, JSON, LIF, MAP, MAT, MATLAB script, MSF, MTX, PDF, PNG, PZFX, Python Script, R File Format, RAW, RDS, ROUT, RPROJ, RTF, SGI, SRA, STAT, TAR Format, TDF, TIFF, TSV, TXT, VCF, WIG, XML, ZIP, bed12, bedgraph, cel, cloupe, docx, mzIdentML, mzXML, pptx, rcc, xls, xlsx, MGF, BIGWIG, H5AD, H5, SF, PKL, BPM, Unspecified, Pending Annotation, maf, CLS, SCN, SVS."""
+Dataset View,The denormalized manifest for dataset submission.,False,_None_,"Table, Spreadsheet"
+[Dataset Grant Number](../valid_values/dataset.md#attribute-dataset-grant-number),"Grant number(s) associated with the dataset's development. Multiple values permitted, comma separated.",True,list like,CA209971
+Dataset Pubmed Id,"The PubMed identifer(s) associated with the development of the dataset. Multiple values permitted, comma separated.",False,list like,31245678
+DatasetView_id,A unique primary key that enables record updates using schematic.,True,unique,DatasetView_67890

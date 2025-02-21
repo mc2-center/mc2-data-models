@@ -1,0 +1,47 @@
+Attribute,Description,Required,Validation Rules,Examples
+[Tool Accessibility](../valid_values/tool.md#attribute-tool-accessibility),Whether there are non-monetary restrictions on accessing an online service.,False,_None_,Nan
+Tool Cmd,"Relevant command, command-line fragment, or option for executing this function/running the tool in this mode.",False,_None_,export GIT_TRACE=1
+Tool Compute Requirements,"Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).",False,"list like, url","Python, pip, pandas, matplotlib"
+[Tool Cost](../valid_values/tool.md#attribute-tool-cost),Monetary cost of acquiring the software.,False,_None_,Commercial
+Tool Date Last Modified,"The date indicating when the tool's entry was most recently modified or updated, providing a timestamp of the latest changes made to the tool's information.",False,date,11/04/2021 15:30:45
+Tool Description,Textual description of the tool.,True,_None_,This is a Python tool that ...
+Tool Documentation Note,Comment about the documentation.,False,_None_,This software comes with comprehensive user manuals and FAQs to assist in navigation and troubleshooting. Regular updates to the documentation are provided based on software upgrades.
+[Tool Documentation Type](../valid_values/tool.md#attribute-tool-documentation-type),"Type of documentation that is linked to. Multiple values permitted, comma separated.",False,list like,API Documentation
+Tool Documentation Url,Link to documentation on the web for the tool.,False,_None_,https://docs.example.com/
+Tool Download Note,Comment about the download.,False,_None_,"Before downloading this tool, ensure your device has adequate storage space and meets the minimum system requirements. Also, our tools may require specific software or apps to function properly. Please refer to our website for detailed information about the required software."
+[Tool Download Type](../valid_values/tool.md#attribute-tool-download-type),"The type of data, information, or system that is obtained when the link is resolved.",False,_None_,API Specification
+Tool Download Url,Link to download (or repo providing a download) for the software.,False,_None_,https://example.com/tool-download/version2.0
+Tool Download Version,Version information (typically a version number) of the software applicable to this download.,False,_None_,1.0.3
+Tool Entity Name,Name of the entities that may be credited,False,list like,"Python, pip"
+[Tool Entity Role](../valid_values/tool.md#attribute-tool-entity-role),"Role performed by entity that is credited, e.g. “Developer”",True,list like,"Developer, Maintainer, Provider, Documentor, Contributor"
+[Tool Entity Type](../valid_values/tool.md#attribute-tool-entity-type),"Types of entities that may be credited, e.g. ‘Person’.",True,list like,Person
+Tool Function Note,"Concise comment about this function, if not apparent from the software description and EDAM annotations.",False,_None_,The tool is used to programmatically ...
+[Tool Grant Number](../valid_values/tool.md#attribute-tool-grant-number),"Grant number associated with the tool's development. Multiple values permitted, comma separated.",True,list like,CA209975
+[Tool Grant Number](../valid_values/tool.md#attribute-tool-grant-number),"Grant number associated with the tool's development. Multiple values permitted, comma separated.",True,list like,CA209975
+Tool Homepage,"Homepage of the software, or some URL that best serves this purpose.",True,url,https://www.example.com/
+[Tool Input Data](../valid_values/tool.md#attribute-tool-input-data),"Type of primary input data. Multiple values permitted, comma separated.",True,list like,DNA Sequence
+[Tool Input Format](../valid_values/tool.md#attribute-tool-input-format),"Allowed format(s) of the input data. Multiple values permitted, comma separated.",True,list like,CSV
+[Tool Language](../valid_values/tool.md#attribute-tool-language),"Name of programming language the software source code was written in. Multiple values permitted, comma separated.",False,list like,Python
+[Tool License](../valid_values/tool.md#attribute-tool-license),"Software or data usage license. Multiple values permitted, comma separated.",False,list like,Apache-2.0
+Tool Link Note,Comment about the link.,False,_None_,This tool cannot be accessed without a valid institutional login.
+[Tool Link Type](../valid_values/tool.md#attribute-tool-link-type),"The type of data, information or system that is obtained when the link is resolved. Multiple values permitted, comma separated.",False,list like,Social Media
+Tool Link Url,A link of some relevance to the software (URL).,False,_None_,https://www.example.com/tool-info.html
+Tool Name,Canonical tool name provided by the tool developer or service provider.,True,unique,Adobe Photoshop
+[Tool Operating System](../valid_values/tool.md#attribute-tool-operating-system),"The operating system supported by a downloadable software package. Multiple values permitted, comma separated.",False,list like,Linux
+[Tool Operation](../valid_values/tool.md#attribute-tool-operation),"The basic operation(s) performed by this software function. Multiple values permitted, comma separated.",True,list like,DNA Barcoding
+[Tool Output Data](../valid_values/tool.md#attribute-tool-output-data),"Type of primary output data. Multiple values permitted, comma separated.",True,list like,"Accession, Alignment,Biological Model ID"
+[Tool Output Format](../valid_values/tool.md#attribute-tool-output-format),"Allowed format(s) of the output data. Multiple values permitted, comma separated.",True,list like,FASTQ
+Tool Package Dependencies,"Specifies the software libraries, frameworks, or other components that a tool or package relies on for its proper functioning. This attribute helps users understand the prerequisites needed for installation and usage of the tool within a given computational environment",False,list like,"Python 3.7 or above, Django 2.2 or above, Postgresql 12.0 or above."
+[Tool Package Dependencies Present](../valid_values/tool.md#attribute-tool-package-dependencies-present),Indicates whether the required package dependencies for tool are present.,True,_None_,True
+[Tool Grant Number](../valid_values/tool.md#attribute-tool-grant-number),"Grant number associated with the tool's development. Multiple values permitted, comma separated.",True,list like,CA209975
+[Tool Grant Number](../valid_values/tool.md#attribute-tool-grant-number),"Grant number associated with the tool's development. Multiple values permitted, comma separated.",True,list like,CA209975
+Tool Pubmed Id,The pubMed identifer associated with the development of the tool.,False,int,26760201
+Tool Release Date,The release date of a product or product model. This can be used to distinguish the exact variant of a product.,True,date,"January 5, 2022"
+[Tool Topic](../valid_values/tool.md#attribute-tool-topic),"General scientific domain the software serves, or other general category. Multiple values permitted, comma separated.",False,list like,Bioinformatics
+[Tool Type](../valid_values/tool.md#attribute-tool-type),"A type of application software: a discrete software entity can have more than one type. Multiple values permitted, comma separated.",False,list like,Command-Line Tool
+Tool Version,Version information (typically a version number) of the software applicable to this entry.,False,_None_,3.2.1
+Tool View,The denormalized manifest for tool submission.,False,_None_,"In a software interface, the 'Tool View' attribute might be set to ""Detail View"" or ""Thumbnail View""."
+Tool View,The denormalized manifest for tool submission.,False,_None_,"In a software interface, the 'Tool View' attribute might be set to ""Detail View"" or ""Thumbnail View""."
+ToolView_id,A unique primary key that enables record updates using schematic.,True,unique,ToolView_6749
+Tool Doi,The Digital Object Identifier (DOI) associated with the computational tool.,True,url,https://doi.org/10.1234/example1
+Tool Doi,The Digital Object Identifier (DOI) associated with the computational tool.,True,url,https://doi.org/10.1234/example1

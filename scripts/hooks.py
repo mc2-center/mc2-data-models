@@ -17,7 +17,8 @@ COLS_TO_RENDER = [
     'Attribute',
     'Description',
     'Required',
-    'Validation Rules'
+    'Validation Rules',
+    'Examples'
 ]
 
 def on_pre_build(config, **kwargs) -> None:
@@ -29,10 +30,20 @@ def on_pre_build(config, **kwargs) -> None:
     """
     for model in DATA_MODELS:
         parent = join("modules", model)
-        df = (
-            pd.read_csv(join(parent, 'annotationProperty.csv'))
-            .fillna(""))
+        # Read both annotation properties and examples
+        annotation_df = pd.read_csv(join(parent, 'annotationProperty.csv'), quoting=1).fillna("")
+        examples_df = pd.read_csv(join(parent, 'exampleColumn.csv'), quoting=1).fillna("")
 
+        # First select only the columns we want from annotation_df
+        df = annotation_df[['Attribute', 'Description', 'Required', 'Validation Rules', 'Valid Values']]
+
+        # Then add the Example column and rename it to Examples
+        df = df.merge(
+            examples_df[['Attribute', 'Example']], 
+            on='Attribute', 
+            how='left'
+        ).rename(columns={'Example': 'Examples'})
+        
         # If attribute has a list of valid values, create a link.
         for _, row in df[df['Valid Values'].ne("")].iterrows():
             attr_link = "[" + row['Attribute'] + (
@@ -48,5 +59,8 @@ def on_pre_build(config, **kwargs) -> None:
 
         # Indicate "None" if there are no validation rules for the attribute.
         df.loc[df['Validation Rules'] == "", "Validation Rules"] = "_None_"
+
+        # Drop the Valid Values column before final output
+        df = df.drop(columns=['Valid Values'])
 
         df[COLS_TO_RENDER].to_csv(join(parent, 'template.csv'), index=False)

@@ -1,0 +1,18 @@
+Attribute,Example
+Publication Doi,10.1016/j.cell.2016.02.013
+Publication Journal,"The New England Journal of Medicine"
+Pubmed Id,26571401
+Pubmed Url,https://www.ncbi.nlm.nih.gov/pubmed/12345678
+Publication Title,"The New York Times"
+Publication Year,2018
+Publication Keywords,"Cancer Pathways, Inflammation, Tumor Microenvironment"
+Publication Authors,"Dr. Sarah Johnson, Dr. Michael Lee, Prof. Amanda Carter"
+Publication Abstract,Nan
+Publication Assay,In Vivo Bioluminescence
+Publication Tumor Type,Acute Lymphoblastic Leukemia
+Publication Tissue,Brain
+Publication Accessibility,Open Access
+Publication View,Online
+Publication Grant Number,CA202123
+Publication Dataset Alias,"GSE45678, DOI:10.1000/exampledataset"
+PublicationView_id,PublicationView_45678

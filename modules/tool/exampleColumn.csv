@@ -1,0 +1,43 @@
+Attribute,Example
+Tool Accessibility,Nan
+Tool Cmd,"export GIT_TRACE=1"
+Tool Compute Requirements,"Python, pip, pandas, matplotlib"
+Tool Cost,Commercial
+Tool Date Last Modified,11/04/2021 15:30:45
+Tool Description,"This is a Python tool that ..."
+Tool Documentation Note,"This software comes with comprehensive user manuals and FAQs to assist in navigation and troubleshooting. Regular updates to the documentation are provided based on software upgrades."
+Tool Documentation Type,API Documentation
+Tool Documentation Url,"https://docs.example.com/"
+Tool Download Note,"Before downloading this tool, ensure your device has adequate storage space and meets the minimum system requirements. Also, our tools may require specific software or apps to function properly. Please refer to our website for detailed information about the required software."
+Tool Download Type,API Specification
+Tool Download Url,https://example.com/tool-download/version2.0
+Tool Download Version,1.0.3
+Tool Entity Name,"Python, pip"
+Tool Entity Role,"Developer, Maintainer, Provider, Documentor, Contributor"
+Tool Entity Type,Person
+Tool Function Note,"The tool is used to programmatically ..."
+Tool Grant Number,CA209975
+Tool Homepage,https://www.example.com/
+Tool Input Data,DNA Sequence
+Tool Input Format,CSV
+Tool Language,Python
+Tool License,Apache-2.0
+Tool Link Note,"This tool cannot be accessed without a valid institutional login."
+Tool Link Type,Social Media
+Tool Link Url,https://www.example.com/tool-info.html
+Tool Name,Adobe Photoshop
+Tool Operating System,Linux
+Tool Operation,DNA Barcoding
+Tool Output Data,"Accession, Alignment,Biological Model ID"
+Tool Output Format,FASTQ
+Tool Package Dependencies,"Python 3.7 or above, Django 2.2 or above, Postgresql 12.0 or above."
+Tool Package Dependencies Present,True
+Tool Grant Number,CA209975
+Tool Pubmed Id,26760201
+Tool Release Date,"January 5, 2022"
+Tool Topic,Bioinformatics
+Tool Type,Command-Line Tool
+Tool Version,3.2.1
+Tool View,"In a software interface, the 'Tool View' attribute might be set to ""Detail View"" or ""Thumbnail View""."
+ToolView_id,ToolView_6749
+Tool Doi,https://doi.org/10.1234/example1

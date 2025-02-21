@@ -1,0 +1,20 @@
+Attribute,Example
+Name,John Doe
+Alternative Names,"Bob, Bobby, Robert"
+Email,johndoe@example.com
+Url,https://www.google.com
+Orcid Id,0000-0002-1825-0097
+Synapse Profile Id,SP12345678
+Last Known Institution,Harvard University
+Working Group Participation,Cell and Tissue Mechanics
+Chair Roles,Steering Committee
+Consent For Portal Display,Yes
+Portal Display,TRUE
+Person View,Public Profile View
+Person Grant Number,CA202177
+Person Consortium Name,PDMC
+Person Publications,"23761710,23761712,23762511"
+Person Datasets,GSE12345
+Person Tools,"R Studio, Python, Jupyter Notebook"
+Person Educational Resources,Nan
+PersonView_id,PersonView_12345

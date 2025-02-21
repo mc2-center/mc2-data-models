@@ -4,7 +4,7 @@ List of standard terms for the [File Data Model](../model/file.md).
 
 <div style="max-height:650px; overflow-x: hidden; overflow-y: auto;">
 
-{{ read_csv('shared/processLevel.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
+{{ read_csv('file/processLevel.csv', header=0, names=['Valid Value','Description'], usecols=['Valid Value','Description'], tablefmt='html') }}
 
 </div>
 
